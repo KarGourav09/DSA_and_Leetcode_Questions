@@ -30,12 +30,10 @@ int Reverse(int x)
         int digit = x % 10;
         x /= 10;
         rev = rev * 10 + digit;
-        if (rev > numeric_limits<int>::max() / 10 || (rev == numeric_limits<int>::max() / 10 && digit > 7)) {
-            return 0;
-        }
-        if (rev < numeric_limits<int>::min() / 10 || (rev == numeric_limits<int>::min() / 10 && digit < -8)) {
-            return 0;
-        }
+        
+        // Check for overflow before multiplying
+        if (rev > 214748364 || (rev == 214748364 && digit > 7)) return 0;
+        if (rev < -214748364 || (rev == -214748364 && digit < -8)) return 0;
     }
     return rev;
 }
