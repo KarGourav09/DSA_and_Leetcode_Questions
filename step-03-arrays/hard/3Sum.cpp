@@ -23,23 +23,33 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> majorityElement(vector<int>& nums) {
-        vector<int> result;
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> result;
 
-        int n = nums.size();
-        int limit = n / 3;
-        unordered_map<int, int> counts;
+        sort(nums.begin(), nums.end());
 
-        for (int i = 0; i < n; i++) {
+        for(int i = 0; i < nums.size() - 2; i++) {
+            if(i > 0 && nums[i] == nums[i - 1]) continue;
 
-                counts[nums[i]]++;
+            int left = i + 1;
+            int right = nums.size() - 1;
 
-                if (counts[nums[i]] > limit) {
-                    if (find(result.begin(), result.end(), nums[i]) ==
-                        result.end()) {
-                        result.push_back(nums[i]);
-                    }
+            while(left < right) {
+                int sum = nums[i] + nums[left] + nums[right];
+
+                if(sum == 0) {
+                    result.push_back({nums[i], nums[left], nums[right]});
+                    left++;
+                    right--;
+
+                    while(left < right && nums[left] == nums[left - 1]) left++;
+                    while(left < right && nums[right] == nums[right + 1]) right--;
+                } else if(sum < 0) {
+                    left++;
+                } else {
+                    right--;
                 }
+            }
         }
         return result;
     }
@@ -49,10 +59,16 @@ int main()
 {
     Solution s;
     vector<int> nums = {-1, 0, 1, 2, -1, -4};
-    vector<int> result = s.majorityElement(nums);
-    for (int i : result)
+    vector<vector<int>> result = s.threeSum(nums);
+    for (const auto& triplet : result)
     {
-        cout << i << " ";
+        cout << "[";
+        for (int i = 0; i < triplet.size(); i++)
+        {
+            cout << triplet[i];
+            if (i < triplet.size() - 1) cout << ",";
+        }
+        cout << "]";
     }
     cout << endl;
     return 0;
