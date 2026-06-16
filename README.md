@@ -9,9 +9,9 @@ Working through [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z
 | Step | Topic | Status |
 |------|-------|--------|
 | 0 | C++ basics + STL | ✅ Done |
-| 1 | Learn the basics (patterns, math, hashing) | 🔄 In progress |
-| 2 | Sorting techniques | 🔄 In progress |
-| 3 | Arrays (easy → medium → hard) | 🔄 In progress |
+| 1 | Learn the basics (patterns, math, hashing) | ✅ Done |
+| 2 | Sorting techniques | ✅ Done |
+| 3 | Arrays (easy → medium → hard) | ✅ Done |
 | 4 | Binary search | 🔄 In progress |
 | 5 | Strings | ⏳ |
 | 6 | Linked lists | ⏳ |
