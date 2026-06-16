@@ -37,8 +37,10 @@ public:
             if(nums[mid] == target)
                 return mid;
 
-            if(nums[left] < nums[mid])
+            // Check if left half is sorted
+            if(nums[left] <= nums[mid])
             {
+                // Target is in the sorted left half
                 if(target >= nums[left] && target < nums[mid])
                     right = mid - 1;
                 else
@@ -46,6 +48,8 @@ public:
             }
             else
             {
+                // Right half is sorted
+                // Target is in the sorted right half
                 if(target > nums[mid] && target <= nums[right])
                     left = mid + 1;
                 else
@@ -60,10 +64,10 @@ public:
 int main()
 {
     Solution s;
-    vector<int> nums = {4, 5, 6, 7, 0, 1, 2};
+
+    vector<int> nums1 = {4, 5, 6, 7, 0, 1, 2};
     int target = 0;
-    int result = s.search(nums, target);
-    cout << result << endl; // Output: 4
+    cout << s.search(nums1, target) << endl;
 
     return 0;
 }
