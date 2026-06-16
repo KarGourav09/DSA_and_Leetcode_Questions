@@ -1,6 +1,6 @@
 # DSA A2Z — Striver's Course in C++
 
-Working through [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) problem by problem, in C++. Every solution includes an approach note and time/space complexity analysis.
+Working through [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) problem by problem, in C++. Every solution includes an approach note and complexity analysis.
 
 ---
 
@@ -8,11 +8,11 @@ Working through [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z
 
 | Step | Topic | Status |
 |------|-------|--------|
-| 0 | C++ basics + STL | 🔄 In progress |
-| 1 | Learn the basics (patterns, math, hashing) | ⏳ |
-| 2 | Sorting techniques | ⏳ |
-| 3 | Arrays (easy → medium → hard) | ⏳ |
-| 4 | Binary search | ⏳ |
+| 0 | C++ basics + STL | ✅ Done |
+| 1 | Learn the basics (patterns, math, hashing) | ✅ Done |
+| 2 | Sorting techniques | ✅ Done |
+| 3 | Arrays (easy → medium → hard) | ✅ Done |
+| 4 | Binary search | 🔄 In progress |
 | 5 | Strings | ⏳ |
 | 6 | Linked lists | ⏳ |
 | 7 | Recursion & backtracking | ⏳ |
@@ -86,4 +86,4 @@ Each `.cpp` file follows this template:
 
 ---
 
-*Started:1-june-2026 Goal: complete all 455+ problems*
+*Started: 1 June 2026 | Goal: Complete all 455+ problems*
