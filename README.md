@@ -12,9 +12,9 @@ Working through [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z
 | 1 | Learn the basics (patterns, math, hashing) | ✅ Done |
 | 2 | Sorting techniques | ✅ Done |
 | 3 | Arrays (easy → medium → hard) | ✅ Done |
-| 4 | Binary search | 🔄 In progress |
-| 5 | Strings | ⏳ |
-| 6 | Linked lists | ⏳ |
+| 4 | Binary search | ✅ Done |
+| 5 | Strings | ✅ Done |
+| 6 | Linked lists | 🔄 In progress |
 | 7 | Recursion & backtracking | ⏳ |
 | 8 | Bit manipulation | ⏳ |
 | 9 | Stack & queues | ⏳ |
@@ -40,12 +40,19 @@ Legend: 🔄 In progress · ✅ Done · ⏳ Pending
 ├── step-00-cpp-basics/
 ├── step-01-basics/
 ├── step-02-sorting/
+│   ├── sorting-1/
+│   └── sorting-2/
 ├── step-03-arrays/
 │   ├── easy/
 │   ├── medium/
 │   └── hard/
 ├── step-04-binary-search/
+│   ├── 1D-array/
+│   ├── 2D-array/
+│   └── Answers/
 ├── step-05-strings/
+│   ├── Basic Problems/
+│   └── Medium Problems/
 ├── step-06-linked-lists/
 ├── step-07-recursion/
 ├── step-08-bit-manipulation/

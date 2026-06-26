@@ -21,6 +21,15 @@ Constraints:
 1 <= strs.length <= 200
 0 <= strs[i].length <= 200
 strs[i] consists of only lowercase English letters if it is non-empty.
+
+Solution: 1. First we will check if the input vector is empty, if it is then we will return an empty string.
+          2. We will take the first string in the vector as the prefix and iterate through each character of the prefix.
+          3. For each character, we will check if it is present in all other strings at the same index.
+          4. If it is not present in any string, we will return the substring of the prefix from index 0 to the current index.
+          5. If we reach the end of the prefix without finding any mismatch, we will return the entire prefix.
+
+          Time:  O(S) where S is the sum of all characters in all strings
+          Space: O(1)
 */
 
 #include <bits/stdc++.h>

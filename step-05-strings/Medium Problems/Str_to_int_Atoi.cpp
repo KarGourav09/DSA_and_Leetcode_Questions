@@ -89,6 +89,9 @@ Solution: 1. First we will ignore any leading WhiteSpaces using the builtIn func
           4. Then we will check if the integer is out of the 32-bit signed integer range [-231, 231 - 1],
           then round the integer to remain in the range.
           5. Finally we will return the integer as the final result.
+
+          Time:  O(n)
+          Space: O(1)
 */
 
 #include <bits/stdc++.h>

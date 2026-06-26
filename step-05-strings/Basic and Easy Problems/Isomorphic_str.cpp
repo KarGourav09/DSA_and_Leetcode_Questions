@@ -46,6 +46,9 @@ s and t consist of any valid ascii character.
 Solution: We can use two hash maps to store the mapping of characters from s to t and from t to s. 
 We iterate through the characters of both strings and check if the mapping is consistent. 
 If we find any inconsistency, we return false. If we finish iterating through both strings without finding any inconsistencies, we return true.
+
+          Time:  O(n)
+          Space: O(1)
 */
 
 #include <bits/stdc++.h>

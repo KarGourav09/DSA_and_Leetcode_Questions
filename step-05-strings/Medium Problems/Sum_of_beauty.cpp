@@ -26,6 +26,8 @@ Solution:
     1. Iterate through all possible substrings of the input string s but to make it more efficient, we canstart it from center and expand outwards to get all possible substrings.
     2. For each substring, calculate the frequency of each character using an unordered_map.
 
+          Time:  O(n^2)
+          Space: O(1)
 */
 
 #include <bits/stdc++.h>

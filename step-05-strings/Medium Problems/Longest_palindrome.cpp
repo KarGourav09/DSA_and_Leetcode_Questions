@@ -24,6 +24,9 @@ Solution: 1. Define a helper function IsPalindrome(s) to check if a string is a 
           3. For each substring, check if it is a palindrome using the helper function.
           4. Keep track of the longest palindromic substring found so far.
           5. Return the longest palindromic substring after checking all substrings.
+
+        Time:  O(n^2)
+        Space: O(1)
 */
 
 #include <bits/stdc++.h>

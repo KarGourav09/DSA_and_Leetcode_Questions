@@ -34,6 +34,9 @@ s consists of uppercase and lowercase English letters and digits.
 Solution:
 1. first we will count the frequency of each character in the string using a vector of pairs where each pair contains a character and its frequency.
 3. we will sort the vector of pairs in decreasing order based on the frequency of the characters.
+
+          Time:  O(n log n)
+          Space: O(n)
 */
 
 #include <bits/stdc++.h>

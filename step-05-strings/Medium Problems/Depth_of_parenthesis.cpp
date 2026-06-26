@@ -36,6 +36,9 @@ It is guaranteed that parentheses expression s is a VPS.
 Solution: 1.First we will make two pointers, counting the number of opening and closing parentheses.
           2. We will iterate through the string and whenever we encounter an opening parenthesis, we will increment the count of opening parentheses and whenever we encounter a closing parenthesis, we will decrement the count of opening parentheses. 
           3. We will keep track of the maximum count of opening parentheses encountered during the iteration and return that as the result.
+
+          Time:  O(n)
+          Space: O(1)
 */
 
 #include <bits/stdc++.h>

@@ -20,6 +20,15 @@ Constraints:
 
 1 <= s.length, goal.length <= 100
 s and goal consist of lowercase English letters
+
+Solution: 1. First we will check if the length of both strings is equal, if not then we can return false.
+          2. We will iterate through the string s and for each character, we will check if it is equal to the first character of goal.
+          3. If it is equal, then we will perform a left shift on s and check if it is equal to goal.
+          4. If it is equal, then we can return true else we can continue the iteration.
+          5. If we reach the end of the string without finding any match, then we can return false.
+
+        Time:  O(n^2)
+        Space: O(1)
 */
 
 #include <bits/stdc++.h>

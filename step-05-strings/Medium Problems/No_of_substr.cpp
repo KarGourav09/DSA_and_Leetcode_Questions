@@ -20,6 +20,9 @@ Solution: 1. Define a helper function atMostKDistinct(s, k):
           5. For each valid window, add (right - left + 1) to the result.
           6. To find substrings with exactly k distinct characters, calculate:
           7. atMostKDistinct(s, k) - atMostKDistinct(s, k-1)
+
+        Time:  O(n)
+        Space: O(k)
 */
 
 #include <bits/stdc++.h>

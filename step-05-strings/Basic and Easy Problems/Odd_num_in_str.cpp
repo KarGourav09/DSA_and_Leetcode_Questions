@@ -26,6 +26,14 @@ Constraints:
 
 1 <= num.length <= 105
 num only consists of digits and does not contain any leading zeros.
+
+Solution: 1. We will iterate through the string from the end to the beginning.
+          2. For each character, we will check if it is an odd digit (1, 3, 5, 7, 9).
+          3. If we find an odd digit, we will return the substring from the start of the string to that index (inclusive).
+          4. If we reach the beginning of the string without finding any odd digit, we will return an empty string.
+
+            Time:  O(n)
+            Space: O(1)
 */
 
 #include <bits/stdc++.h>

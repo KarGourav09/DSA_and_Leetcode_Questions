@@ -37,6 +37,10 @@ Follow-up: If the string data type is mutable in your language, can you solve it
 Solution: We can solve this problem in-place with O(1) extra space by following these steps:
 1. Reverse the entire string.
 2. Iterate through the string and reverse each word back to its correct orientation.
+3. Remove any extra spaces between words and at the beginning and end of the string.
+
+          Time:  O(n)
+          Space: O(1)
 */
 
 #include <bits/stdc++.h>

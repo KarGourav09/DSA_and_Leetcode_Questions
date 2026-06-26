@@ -38,6 +38,13 @@ Constraints:
 1 <= s.length <= 105
 s[i] is either '(' or ')'.
 s is a valid parentheses string.
+
+Solution: 1. First we will find the no of '(' and ')' in the string and store it in a vector of strings.
+          2. For each string in the vector, we will check if it is primitive or not, if not then we can remove the outermost parentheses else we can keep it as it is, for each phase we can check if the no of '(' == ')' then we can remove the outermost parentheses else we can keep it as it is.
+          3. Finally we will return the entire string only containing the primitive strings after removing the outermost parentheses.
+
+          Time:  O(n)
+          Space: O(n)
 */
 
 #include <bits/stdc++.h>
