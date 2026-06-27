@@ -28,6 +28,9 @@ Follow up: Your algorithm's time complexity must be better than O(n log n), wher
 Solution: 1. make an vector of pairs (int, int) to store the frequency of each element in the array. 
           2. sort the vector of pairs in descending order based on the frequency. 
           3. return the first k elements from the sorted vector.
+
+          time: O(n log n), where n is the length of the input array.
+          Space: O(n), since we are using a vector of pairs to store the frequency of each element in the array.
 */
 
 #include <bits/stdc++.h>
