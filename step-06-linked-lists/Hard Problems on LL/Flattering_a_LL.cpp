@@ -101,3 +101,51 @@ int main() {
 
     return 0;
 }
+
+/*
+Brute Force Approach: We can use a priority queue (min-heap) to store all the nodes of the linked list. We will traverse the main linked list and for each node, we will push its child nodes into the priority queue. After traversing the entire list, we will pop nodes from the priority queue and create a new flattened linked list in sorted order.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Node {
+    int data;
+    Node *next;
+    Node *child;
+    Node() : data(0), next(nullptr), child(nullptr) {}
+    Node(int x) : data(x), next(nullptr), child(nullptr) {}
+    Node(int x, Node *next, Node *child) : data(x), next(next), child(child) {}
+};
+
+class Solution {
+public:
+    Node* FlattenList(Node* head){
+        if(!head) return nullptr;
+
+        priority_queue<int, vector<int>, greater<int>> minHeap;
+        Node* curr = head;
+
+        while(curr){
+            minHeap.push(curr->data);
+            Node* childCurr = curr->child;
+            while(childCurr){
+                minHeap.push(childCurr->data);
+                childCurr = childCurr->child;
+            }
+            curr = curr->next;
+        }
+
+        Node* newHead = new Node(minHeap.top());
+        minHeap.pop();
+        Node* newCurr = newHead;
+
+        while(!minHeap.empty()){
+            newCurr->next = new Node(minHeap.top());
+            minHeap.pop();
+            newCurr = newCurr->next;
+        }
+
+        return newHead;
+    }
+};
+*/
