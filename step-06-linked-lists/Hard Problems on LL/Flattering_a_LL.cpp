@@ -103,7 +103,9 @@ int main() {
 }
 
 /*
-Brute Force Approach: We can use a priority queue (min-heap) to store all the nodes of the linked list. We will traverse the main linked list and for each node, we will push its child nodes into the priority queue. After traversing the entire list, we will pop nodes from the priority queue and create a new flattened linked list in sorted order.
+Brute Force Approach: We can use a priority queue (min-heap) to store all the nodes of the linked list. 
+We will traverse the main linked list and for each node, we will push its child nodes into the priority queue. 
+After traversing the entire list, we will pop nodes from the priority queue and create a new flattened linked list in sorted order.
 
 #include <bits/stdc++.h>
 using namespace std;
