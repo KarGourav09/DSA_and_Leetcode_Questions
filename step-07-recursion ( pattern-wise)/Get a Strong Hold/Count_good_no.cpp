@@ -26,26 +26,53 @@ Constraints:
 
 1 <= n <= 1015
 
-Solution: 1. We can use a recursive approach to solve this problem. We can define a recursive function that takes the current index and the length of the string as parameters. If the current index is equal to the length of the string, we have found a good number and we can return 1. Otherwise, we can check if the current index is even or odd. If it is even, we can iterate through all even digits (0, 2, 4, 6, 8) and call the recursive function for the next index. If it is odd, we can iterate through all prime digits (2, 3, 5, 7) and call the recursive function for the next index. We can keep track of the total count of good numbers and return it at the end.
+Solution: 1. For each index in the digit string, handle two cases: 
+   - If the index is even, we can choose from 5 even digits (0, 2, 4, 6, 8).
+   - If the index is odd, we can choose from 4 prime digits (2, 3, 5, 7).
+        2. Use recursion to calculate the total number of good digit strings of length n, taking care to apply modulo 10^9 + 7 to avoid overflow.
+        3. Return the final count of good digit strings of length n.
+
+time: O(log n) for the power function, since we are using exponentiation by squaring.
+space: O(1) since we are using a constant amount of space for variables and the recursion stack is not used in this implementation.
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
 class Solution {
+private:
+    long long power(long long base, long long exp) {
+        long long res = 1;
+        const int MOD = 1e9 + 7;
+        base %= MOD;
+        
+        while (exp > 0) {
+            if (exp % 2 == 1) {
+                res = (res * base) % MOD;
+            }
+            base = (base * base) % MOD;
+            exp /= 2;
+        }
+        return res;
+    }
+
 public:
     int countGoodNumbers(long long n) {
-        if(n == 0) return 1;
-        
-        long long 
-        }
-        return result;
+        const int MOD = 1e9 + 7;
+        long long evenCount = (n + 1) / 2;
+        long long oddCount = n / 2;
+
+        long long evenChoices = power(5, evenCount);
+        long long oddChoices = power(4, oddCount);
+
+        return (evenChoices * oddChoices) % MOD;
     }
 };
 
 int main() {
-    Solution sol;
-    long long n = 4;
-    cout << sol.countGoodNumbers(n) << endl; // Output: 400
+    Solution solution;
+    long long n = 4; // Example input
+    int result = solution.countGoodNumbers(n);
+    cout << "Total good digit strings of length " << n << ": " << result << endl;
     return 0;
 }
