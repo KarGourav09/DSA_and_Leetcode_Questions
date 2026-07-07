@@ -17,6 +17,16 @@ Output:
  [1]
 Explanation:
  A single-element stack is already sorted.
+
+Solution Approach:
+1. Base Case: If the stack is empty, return.
+2. Recursive Case:
+   a. Pop the top element from the stack and store it in a variable (let's call it 'temp').
+   b. Recursively call the sorting function on the remaining stack.
+   c. After the recursive call returns, insert 'temp' back into the sorted stack in its correct position using another recursive function.
+
+time complexity: O(n^2) in the worst case, where n is the number of elements in the stack. This is because for each element, we may need to traverse the entire stack to find its correct position.
+space complexity: O(n) due to the recursive call stack, where n is the number of elements in the stack.
  */
 
 #include <bits/stdc++.h>
