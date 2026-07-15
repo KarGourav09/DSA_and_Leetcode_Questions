@@ -33,10 +33,18 @@ board and word consists of only lowercase and uppercase English letters.
 
 Follow up: Could you use search pruning to make your solution faster with a larger board?
 
-Solution: 1. First we will take the first character of the word and search for it in the board. If we find it, we will start a DFS from that cell to find the next character of the word. We will mark the cell as visited by changing its value to a special character (e.g., '#') and then backtrack after exploring all possible paths. If we reach the end of the word, we return true. If we exhaust all possibilities and do not find the word, we return false.
+Solution: We can solve this using backtracking. Starting from each cell in the grid, we explore all four possible directions (up, down, left, right) to try to match the next character in the word. We mark visited cells temporarily to avoid reusing them, and backtrack when a path fails. This ensures we explore all possible connected sequences of characters in the board that might form the target word.
+        Iterate through each cell in the board.
+        If the cell matches the first letter of the word, start a DFS search from that cell.
+        In DFS, check boundary conditions and whether the character matches the current letter in the word.
+        If matched, temporarily mark the cell as visited.
+        Recursively search in all four directions for the next letter.
+        If the whole word is found, return true.
+        Backtrack by restoring the cell’s original value before returning.
+        If no path matches the word, return false.
 
-time: O(N * 3^L) where N is the number of cells in the board and L is the length of the word. In the worst case, we may have to explore all 3 directions (up, down, left, right) for each character in the word.
-Space: O(L) where L is the length of the word. The space complexity is determined by the recursion stack, which can go as deep as the length of the word in the worst case.
+time: O(N * 3^L), where N is the number of cells in the board and L is the length of the word. Each cell can lead to 3 possible directions (excluding the direction we came from) for each character in the word.
+space: O(L), where L is the length of the word, due to the recursion stack
 
 */
 
@@ -46,27 +54,35 @@ using namespace std;
 class Solution {
 public:
     bool exist(vector<vector<char>>& board, string word) {
-        int n = board.size();
-        int m = board[0].size();
-
-        int len = word.size();
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < m; ++j) {
-                if (board[i][j] == word[0]) {
-                    if (dfs(board, word, i, j, 0)) return true;
+        int m = board.size();
+        int n = board[0].size();
+        
+        for (int i = 0; i < m; ++i) {
+            for (int j = 0; j < n; ++j) {
+                if (dfs(board, word, i, j, 0)) {
+                    return true;
                 }
             }
         }
         return false;
     }
-private:
-    bool dfs(vector<vector<char>>& board, string word, int i, int j, int k) {
-        if (k == word.size()) return true;
-        if (i < 0 || i >= board.size() || j < 0 || j >= board[0].size() || board[i][j] != word[k]) return false;
-        char temp = board[i][j];
+
+    bool dfs(vector<vector<char>>& board, string& word, int i, int j, int index) {
+        if (index == word.size()) return true; // All characters matched
+        if (i < 0 || i >= board.size() || j < 0 || j >= board[0].size() || board[i][j] != word[index]) {
+            return false; // Out of bounds or character mismatch
+        }
+        
+        char temp = board[i][j]; // Store the current character
         board[i][j] = '#'; // Mark as visited
-        bool found = dfs(board, word, i + 1, j, k + 1) || dfs(board, word, i - 1, j, k + 1) || dfs(board, word, i, j + 1, k + 1) || dfs(board, word, i, j - 1, k + 1);
-        board[i][j] = temp; // Backtrack
+        
+        // Explore all four directions
+        bool found = dfs(board, word, i + 1, j, index + 1) ||
+                     dfs(board, word, i - 1, j, index + 1) ||
+                     dfs(board, word, i, j + 1, index + 1) ||
+                     dfs(board, word, i, j - 1, index + 1);
+        
+        board[i][j] = temp; // Restore the original character
         return found;
     }
 };

@@ -18,7 +18,10 @@ Output : [ [ "b", "a", "a"] , [ "b", "aa" ] ]
 
 Explanation : Above all are the possible ways in which the string can be partitioned so that each substring is a palindrome.
 
-Solution: 
+Solution: We can solve this problem using backtracking. We will explore all possible partitions of the string and check if each substring is a palindrome. If it is, we will add it to the current partition and continue to explore further partitions. When we reach the end of the string, we will add the current partition to the result.
+
+time: O(N * 2^N), where N is the length of the string. In the worst case, we can have 2^N possible partitions, and for each partition, we may need to check if each substring is a palindrome, which takes O(N) time.
+space: O(N), where N is the length of the string. The space complexity is due to the recursion stack and the space used to store the current partition.
 */
 
 #include <bits/stdc++.h>
