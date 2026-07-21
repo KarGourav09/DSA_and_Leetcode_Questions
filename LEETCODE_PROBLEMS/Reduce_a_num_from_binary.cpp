@@ -48,26 +48,21 @@ using namespace std;
 class Solution {
 public:
     int numSteps(string s) {
-        int n = s.length();
-        int decimal = 0;
-        for(int i = 0; i < n; i++){
-            decimal = decimal * 2 + (s[i] - '0');
-        }
-        return Reduce(decimal);
-    }
-
-    int Reduce(int n){
         int steps = 0;
-        if(n == 1) return steps;
-        while(n != 1){
-            if(n % 2 == 0){
-                n /= 2;
-            }else{
-                n += 1;
+        int carry = 0;
+
+        for (int i = (int)s.length() - 1; i > 0; --i) {
+            int bit = (s[i] - '0') + carry;
+
+            if (bit == 1) {
+                steps += 2;
+                carry = 1;
+            } else {
+                steps += 1;
             }
-            steps++;
         }
-        return steps;
+
+        return steps + carry;
     }
 };
 
