@@ -27,4 +27,61 @@ Constraints:
 num consists of only digits.
 -231 <= target <= 231 - 1
 
+Solution: We are given three arithmetic operators (+, -, *). we can use a function that tries all the combinations of the operators in between the digits of the string num. We can use recursion to generate all possible expressions and evaluate them to check if they equal the target value.
+
+time: O(4^n) where n is the length of the string num, since for each digit we have 4 choices (no operator, +, -, *).
+space: O(n) for the recursion stack and the space used to store the current expression.
+
+Optimisation: We can optimize the evaluation of the expression by keeping track of the current value and the previous operand, so we don't have to evaluate the entire expression each time. This allows us to handle multiplication correctly by adjusting the current value based on the previous operand.
 */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    void solve(string num, int target, int index, long long current, long long previous, string expression, vector<string> &result) {
+        if (index == num.length()) {
+            if (current == target) {
+                result.push_back(expression);
+            }
+            return;
+        }
+
+        for (int i = index; i < num.length(); i++) {
+            string operand_str = num.substr(index, i - index + 1);
+            long long operand = stoll(operand_str);
+
+            if (index == 0) {
+                solve(num, target, i + 1, operand, operand, operand_str, result);
+            } else {
+                solve(num, target, i + 1, current + operand, operand, expression + "+" + operand_str, result);
+                solve(num, target, i + 1, current - operand, -operand, expression + "-" + operand_str, result);
+                solve(num, target, i + 1, current - previous + previous * operand, previous * operand, expression + "*" + operand_str, result);
+            }
+
+            if (num[index] == '0') {
+                break;
+            }
+        }
+    }
+
+    vector<string> addOperators(string num, int target) {
+        vector<string> result;
+        solve(num, target, 0, 0, 0, "", result);
+        return result;
+    }
+};
+
+int main() {
+    Solution solution;
+    string num = "123";
+    int target = 6;
+    vector<string> result = solution.addOperators(num, target);
+    
+    for (const string &expr : result) {
+        cout << expr << endl;
+    }
+    
+    return 0;
+}
