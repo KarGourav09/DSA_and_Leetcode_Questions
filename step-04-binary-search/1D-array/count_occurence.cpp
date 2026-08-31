@@ -9,6 +9,10 @@ Output
 Explanation:
  3 is occurring 4 times in
 the given array so it is our answer.
+
+Solution: We can use binary search to find the first and last occurrence of X in the sorted array. The number of occurrences will be the difference between the indices of the last and first occurrences plus one. If X is not found in the array, we return -1.
+Time Complexity: O(log N) where N is the number of elements in the array.
+Space Complexity: O(1)
 */
 
 #include <iostream>
