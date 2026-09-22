@@ -1,6 +1,6 @@
 # DSA A2Z — Striver's Course in C++
 
-Working through [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) problem by problem, in C++. Every solution includes an approach note and complexity analysis.
+Working through [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) problem by problem, in C++. Solutions include approach notes and complexity analysis, while each topic folder also contains a `00 REVISION THEORY.txt` file for quick review.
 
 ---
 
@@ -14,9 +14,9 @@ Working through [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z
 | 3 | Arrays (easy → medium → hard) | ✅ Done |
 | 4 | Binary search | ✅ Done |
 | 5 | Strings | ✅ Done |
-| 6 | Linked lists | 🔄 In progress |
-| 7 | Recursion & backtracking | ⏳ |
-| 8 | Bit manipulation | ⏳ |
+| 6 | Linked lists | 🔄 17 / 45 |
+| 7 | Recursion & backtracking | ✅ 17 / 17 |
+| 8 | Bit manipulation | 🔄 7 / 8 |
 | 9 | Stack & queues | ⏳ |
 | 10 | Sliding window & two pointer | ⏳ |
 | 11 | Heaps | ⏳ |
@@ -37,25 +37,47 @@ Legend: 🔄 In progress · ✅ Done · ⏳ Pending
 
 ```
 .
-├── step-00-cpp-basics/
 ├── step-01-basics/
+│   ├── 01 FUNDAMENTALS OF PROGRAMMING/
+│   ├── 02 LANGUAGE BASICS/
+│   ├── 03 PATTERNS/
+│   ├── 04 TIME COMPLEXITY/
+│   ├── 05 STANDARD LIBRARIES AND COLLECTIONS/
+│   ├── 06 CONCEPT BASICS/
+│   ├── 07 BASIC MATHS/
+│   ├── 08 BASIC ARRAYS/
+│   ├── 09 BASIC HASHING/
+│   ├── 10 BASIC STRINGS/
+│   └── 11 BASIC RECURSION/
 ├── step-02-sorting/
-│   ├── sorting-1/
-│   └── sorting-2/
+│   ├── 01 SORTING-1/
+│   └── 02 SORTING-2/
 ├── step-03-arrays/
-│   ├── easy/
-│   ├── medium/
-│   └── hard/
+│   ├── 01 EASY/
+│   ├── 02 MEDIUM/
+│   ├── 03 HARD/
+│   └── 04 HASHING/
 ├── step-04-binary-search/
-│   ├── 1D-array/
-│   ├── 2D-array/
-│   └── Answers/
+│   ├── 01 1D-ARRAY/
+│   ├── 02 2D-ARRAY/
+│   └── 03 ANSWERS/
 ├── step-05-strings/
-│   ├── Basic Problems/
+│   ├── Basic and Easy Problems/
 │   └── Medium Problems/
 ├── step-06-linked-lists/
-├── step-07-recursion/
+│   ├── 01 1D LINKED LIST/
+│   ├── 02 DOUBLE LINKED LIST/
+│   ├── 03 MEDIUM PROBLEMS ON LL/
+│   ├── 04 HARD PROBLEMS ON LL/
+│   └── 05 MEDIUM PROBLEMS ON DLL/
+├── step-07-recursion ( pattern-wise)/
+│   ├── 01 GET A STRONG HOLD/
+│   ├── 02 SUBSEQUENCES PATTERN/
+│   └── 03 TRY ALL COMBO OR HARD/
 ├── step-08-bit-manipulation/
+│   ├── 01 LEARN BIT MANIPULATION/
+│   ├── 02 INTERVIEW PROBLEMS/
+│   └── 03 ADVANCED MATHS/
 ├── step-09-stacks-queues/
 ├── step-10-sliding-window/
 ├── step-11-heaps/
@@ -69,7 +91,7 @@ Legend: 🔄 In progress · ✅ Done · ⏳ Pending
 └── step-19-mixed/
 ```
 
-Each `.cpp` file follows this template:
+Each topic folder contains a revision theory file. Runnable `.cpp` files generally include the problem statement, approach, and complexity analysis:
 
 ```cpp
 /*
