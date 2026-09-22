@@ -1,17 +1,47 @@
 # DSA A2Z — Striver's Course in C++
 
-Working through [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) problem by problem, in C++. Solutions include approach notes and complexity analysis, while each topic folder also contains a `00 REVISION THEORY.txt` file for quick review.
+<div align="center">
+
+[![C++](https://img.shields.io/badge/C%2B%2B-17-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
+[![Striver](https://img.shields.io/badge/Track-Striver%20A2Z-FF6B6B?style=for-the-badge)](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/)
+[![LeetCode](https://img.shields.io/badge/Practice-LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/KarGourav09/)
+[![Status](https://img.shields.io/badge/Status-In%20Progress-4CAF50?style=for-the-badge)](#progress-tracker)
+
+</div>
+
+A personal repository for solving [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) problem by problem in C++.
+
+This repo is a structured practice log covering:
+- core DSA concepts
+- pattern-based problem solving
+- explanation-oriented solutions
+- time and space complexity analysis
+- curated notes and implementations
 
 ---
 
-## Progress tracker
+## 🚀 Why this repo?
+
+This repository exists to:
+- build strong problem-solving fundamentals
+- track progress across all steps of the course
+- keep solutions consistent and readable
+- practice interview-style problems in C++
+- reinforce concepts through repeated implementation
+
+---
+
+## 📊 Progress Tracker
+
+> Current focus: Linked Lists  
+> Goal: Complete all 455+ problems from the A2Z roadmap
 
 | Step | Topic | Status |
 |------|-------|--------|
 | 0 | C++ basics + STL | ✅ Done |
-| 1 | Learn the basics (patterns, math, hashing) | ✅ Done |
+| 1 | Learn the basics | ✅ Done |
 | 2 | Sorting techniques | ✅ Done |
-| 3 | Arrays (easy → medium → hard) | ✅ Done |
+| 3 | Arrays | ✅ Done |
 | 4 | Binary search | ✅ Done |
 | 5 | Strings | ✅ Done |
 | 6 | Linked lists | 🔄 17 / 45 |
@@ -29,13 +59,16 @@ Working through [Striver's A2Z DSA Course](https://takeuforward.org/strivers-a2z
 | 18 | Strings (advanced) | ⏳ |
 | 19 | Mixed problems | ⏳ |
 
-Legend: 🔄 In progress · ✅ Done · ⏳ Pending
+Legend:
+- ✅ Done
+- 🔄 In progress
+- ⏳ Pending
 
 ---
 
-## Repository structure
+## 🗂️ Repository Structure
 
-```
+```text
 .
 ├── step-01-basics/
 │   ├── 01 FUNDAMENTALS OF PROGRAMMING/
@@ -88,31 +121,5 @@ Legend: 🔄 In progress · ✅ Done · ⏳ Pending
 ├── step-16-dp/
 ├── step-17-tries/
 ├── step-18-strings-advanced/
-└── step-19-mixed/
-```
-
-Each topic folder contains a revision theory file. Runnable `.cpp` files generally include the problem statement, approach, and complexity analysis:
-
-```cpp
-/*
- * Problem: <problem name>
- * Link: <LeetCode / GFG URL>
- *
- * Approach: <brief explanation>
- * Time:  O(...)
- * Space: O(...)
- */
-```
-
----
-
-## Resources
-
-- Course sheet — [takeuforward.org/strivers-a2z-dsa-course](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/)
-- Striver's YouTube — [@takeUforward](https://www.youtube.com/@takeUforward)
-- C++ STL quick reference — [cppreference.com](https://en.cppreference.com/w/)
-- My LeetCode profile — *(https://leetcode.com/u/KarGourav09/)*
-
----
-
-*Started: 1 June 2026 | Goal: Complete all 455+ problems*
+├── step-19-mixed/
+└── README.md
