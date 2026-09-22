@@ -1,5 +1,4 @@
-<div align="center">
-# DSA A2Z — Striver's Course in C++
+                                                                # DSA A2Z — Striver's Course in C++
 
 <div align="center">
 
