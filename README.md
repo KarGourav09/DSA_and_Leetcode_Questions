@@ -184,9 +184,3 @@ Made with ❤️ for structured learning and problem solving.
 
 </div>
 ```
-
-If you want, I can also make:
-- a more minimal “clean GitHub” version
-- a more visually rich “portfolio/readme” version
-- a version with direct links to each step folder
-- a version optimized for GitHub dark mode appearance
