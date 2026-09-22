@@ -1,0 +1,13 @@
+LANGUAGE BASICS - LEARN PYTHON
+
+Learn expressions, indentation, variables, numeric and string types, if/elif/else, for/while, functions, lists, tuples, dictionaries, sets, slicing, and exceptions.
+
+DSA essentials:
+- list is a dynamic array;
+- dict and set provide average O(1) hashing;
+- deque supports both ends;
+- heapq is a min-heap;
+- use enumerate and zip for readable loops;
+- avoid accidental aliasing when copying nested lists.
+
+Always check whether a mutation changes the original object and whether integer/string operations fit the expected complexity.

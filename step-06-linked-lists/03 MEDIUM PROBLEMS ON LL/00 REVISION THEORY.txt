@@ -1,0 +1,15 @@
+MEDIUM LINKED-LIST PROBLEMS - REVISION THEORY
+
+Pointer techniques
+Use slow and fast pointers for the middle and cycle detection. Slow moves one step and fast two; when fast reaches the end, slow is at the middle. For a cycle, meeting proves a loop; resetting one pointer to head and moving both one step finds the entry.
+
+Reversal
+Iterative reversal keeps prev, current, and next. Save next before changing current->next, then move all pointers. Recursive reversal uses the returned new head and sets the old forward link backward, followed by current->next=nullptr.
+
+Two-pointer deletion
+To remove the nth node from the back, use a dummy node and keep fast n steps ahead of slow. Move both until fast reaches the end; slow then precedes the target. The dummy handles deleting the original head.
+
+Other patterns
+Palindrome checks reverse or compare the second half. Odd-even segregation changes links while preserving relative order. Sorting 0/1/2 can use three partitions or count values. Add numbers digit by digit with carry; append a final carry.
+
+Edge cases: empty input, one node, even/odd length, cycle at head, n equal to length, and carry overflow.

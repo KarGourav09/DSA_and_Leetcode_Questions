@@ -1,0 +1,11 @@
+PYTHON LIBRARIES PART 1
+
+Built-ins useful for DSA:
+list: dynamic array; append and pop at end are amortized O(1), front insertion is O(n).
+dict: hash map with average O(1) lookup/update.
+set: unique hashable values with average O(1) membership.
+deque from collections: O(1) operations at both ends.
+Counter from collections: frequency counting.
+defaultdict: convenient grouped accumulation.
+
+Useful functions: len, range, enumerate, zip, sorted, sum, min, max, any, all. Prefer clear built-ins when they express the algorithm, but still state their complexity.

@@ -1,0 +1,17 @@
+BASIC ARRAYS - REVISION THEORY
+
+An array stores same-type values in contiguous positions. Index access is O(1); a full scan is O(n); reversing in place is O(n) time and O(1) extra space. Reading n values requires handling n=0 without accessing element zero.
+
+Sum
+Maintain a running long long total. The invariant after processing i values is that total equals the sum of those i values.
+
+Odd count
+A value is odd when value%2 != 0. This also works for negative integers in C++. Count without changing the input.
+
+Sorted check
+A non-decreasing array satisfies a[i-1] <= a[i] for every adjacent pair. One violation is enough to answer false. The edited implementation in this folder uses a previous-value invariant and works for empty and one-element arrays.
+
+Reverse
+Use two pointers at the first and last positions, swap, then move inward until they meet. Every swap fixes two positions, proving termination after about n/2 swaps.
+
+Revision questions: Is sorted strict or non-decreasing? Can the sum overflow int? What does the algorithm do for an empty array? Can the operation be performed in place?

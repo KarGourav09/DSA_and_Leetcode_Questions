@@ -1,0 +1,14 @@
+BINARY SEARCH ON ANSWERS - REVISION THEORY
+
+Binary-search-on-answer works when a numerical answer x has a monotonic feasibility predicate: if x is feasible, every larger or smaller value in one direction is also feasible. Identify the answer range and write a check function before coding the search.
+
+Typical pattern
+Set low and high to valid bounds. Compute mid safely. If feasible(mid), record it and move toward a better answer; otherwise move away. Prove that the predicate changes at most once.
+
+Examples
+Koko and shipping use a capacity/speed check. Bouquets use days and count consecutive flowers. Book allocation, painter partition, and split array use greedy contiguous grouping for a proposed maximum. Aggressive cows maximizes a minimum distance with greedy placement. Kth missing positive counts missing values before a candidate.
+
+Math searches
+Integer square root and nth root use multiplication carefully to avoid overflow. Gas-station distance may require floating-point precision and a stopping tolerance.
+
+Common mistakes: wrong bound, non-monotonic check, overflow in products, forgetting impossible cases, and returning the wrong boundary after convergence.

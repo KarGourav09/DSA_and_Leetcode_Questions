@@ -1,0 +1,17 @@
+BASIC STRINGS - REVISION THEORY
+
+Strings are sequences of characters. First clarify whether matching is case-sensitive and whether spaces or punctuation count. In C++, cin reads a token; getline reads a complete line.
+
+Reverse and palindrome
+Reverse with two pointers or compare mirrored characters. A string is a palindrome when every pair s[left], s[right] matches as the pointers move inward. Both are O(n) time.
+
+Largest odd number in a string
+For a string of decimal digits, the largest odd-valued prefix ends at the rightmost odd digit. Remove trailing even digits; if none is odd, no non-empty answer exists.
+
+Prefix and mappings
+The common prefix can only shrink as each word is compared. Isomorphic strings require a consistent one-to-one mapping in both directions.
+
+Rotation, anagrams, and frequency sorting
+Normalize k by string length before rotating. Anagrams have equal character counts. Sort distinct characters by descending frequency and use a deterministic tie rule when required.
+
+Revision questions: Does the input contain spaces? Is the alphabet fixed? Can output be empty? Does rotation mean left or right? What tie rule is expected?

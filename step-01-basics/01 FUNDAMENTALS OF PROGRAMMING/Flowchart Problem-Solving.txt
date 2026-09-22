@@ -1,0 +1,11 @@
+FLOWCHART PROBLEM-SOLVING
+
+Convert a problem into a flowchart by identifying: start, input, transformations, decisions, loops, output, and end. A loop must have an initial state, a condition, and a progress step that eventually makes the condition false.
+
+Example: even or odd
+Start -> read n -> test n % 2 == 0 -> output even or odd -> end.
+
+For a sum from 1 to N:
+Start -> read N -> sum=0, i=1 -> is i<=N? -> add i and increment i -> repeat -> output sum -> end.
+
+Trace each arrow using a small input. If a state cannot be reached, a branch is missing; if a loop never changes its condition, it may not terminate.

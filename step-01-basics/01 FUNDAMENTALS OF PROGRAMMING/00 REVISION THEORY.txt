@@ -1,0 +1,21 @@
+FUNDAMENTALS OF PROGRAMMING - REVISION THEORY
+
+1. Programming mindset
+Programming is the translation of a real problem into precise state changes. Separate the problem into input, output, constraints, transformations, and exceptional cases. Syntax is only the final expression of the reasoning.
+
+2. Computer model
+A program executes instructions using CPU registers and memory. Variables name memory values; a type determines representation and valid operations. Input changes program state, control flow chooses which instructions run, and output exposes the final result.
+
+3. Problem-solving workflow
+Restate the problem, solve a tiny example manually, write pseudocode, establish a simple brute-force solution, test it, then optimize repeated work. Record an invariant: a statement that remains true after every loop or recursive call.
+
+4. Control flow
+Sequence executes statements in order. Selection uses if/else or switch. Iteration uses a loop with initialization, a condition, and progress. A loop that does not move toward its stopping condition may not terminate.
+
+5. Dry runs and debugging
+Trace variables in a table. Test empty input, one item, duplicates, sorted and reverse-sorted data, zero, negatives, and maximum values. Reproduce a failure with the smallest input, find the first incorrect state, change one hypothesis, and rerun tests.
+
+6. Pseudocode and flowcharts
+Pseudocode is language-independent; flowcharts make decisions and loops visible. Both should show every branch, including invalid or empty cases.
+
+Revision questions: What are the inputs and constraints? What invariant proves the loop? What is the brute force? Which operation dominates? Where can overflow, an off-by-one error, or an empty input occur?

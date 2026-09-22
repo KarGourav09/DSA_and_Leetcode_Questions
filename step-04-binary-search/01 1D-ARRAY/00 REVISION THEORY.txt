@@ -1,0 +1,17 @@
+BINARY SEARCH 1D - REVISION THEORY
+
+Binary search requires a monotonic decision: after a boundary, every later value must have the opposite property. Maintain a closed interval [left,right] or a half-open interval and keep its meaning unchanged.
+
+Basic search
+Compare the middle value with target. If it is too small, discard the left half; otherwise discard the right half. Use mid=left+(right-left)/2 to avoid overflow. Time O(log n), space O(1).
+
+Bounds and occurrences
+Lower bound is the first index with value >= target. Upper bound is the first index with value > target. First/last occurrence follows from choosing the correct side after finding a match.
+
+Rotated arrays
+A sorted half can be identified by comparing endpoints. Duplicates can make both halves look sorted, requiring a cautious shrink. Minimum and rotation count use the sorted-half property.
+
+Other patterns
+Peak search compares adjacent values and moves toward the rising side. A single element in paired sorted data uses index parity and binary search.
+
+Revision questions: What does each endpoint mean? Is the predicate monotonic? Are duplicates present? What happens when the answer is outside the array?

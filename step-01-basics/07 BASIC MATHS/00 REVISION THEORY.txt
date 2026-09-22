@@ -1,0 +1,18 @@
+BASIC MATHS - REVISION THEORY
+
+Digit operations
+For a non-negative number, n%10 is the last digit and n/10 removes it. Zero has one digit. Decide how negative numbers should behave. Reversal may overflow a fixed-width type, so constraints matter.
+
+Palindrome and Armstrong
+A number is a palindrome when its digits equal their reverse. An Armstrong number equals the sum of each digit raised to the number of digits. Count digits first, then accumulate.
+
+Factorial
+0!=1 and n!=n*(n-1)!. Factorial grows quickly; use a sufficiently wide type and reject negative input. The iterative version avoids recursion stack use.
+
+Prime and perfect numbers
+A prime greater than one has no divisor other than one and itself. Check candidates through sqrt(n). A perfect number equals the sum of its proper positive divisors; enumerate divisor pairs without double-counting a square root.
+
+GCD, LCM, divisors, and sieve
+Euclid's algorithm is logarithmic. Compute LCM as a/gcd(a,b)*b to reduce overflow and return zero when either input is zero. Enumerate divisors in pairs through sqrt(n). Sieve primes by crossing off multiples beginning at p*p.
+
+Revision questions: What happens for 0, 1, and negatives? Can multiplication overflow? Did a square root divisor get counted twice? What is the exact complexity?

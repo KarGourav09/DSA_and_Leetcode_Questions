@@ -1,0 +1,15 @@
+CONCEPT BASICS - REVISION THEORY
+
+Basic maths
+Extract digits with n%10 and remove a digit with integer division by 10. GCD uses Euclid's identity gcd(a,b)=gcd(b,a%b); LCM is abs(a/gcd(a,b)*b). Test divisors only through sqrt(n). Divisors occur in pairs. Sieve marks multiples and counts primes in O(N log log N).
+
+Basic arrays
+Arrays provide O(1) indexing but middle insertion/deletion costs O(n). Typical techniques are running aggregates, two pointers, prefix sums, sliding windows, sorting, and frequency arrays. Check empty input and use a wide type for sums.
+
+Basic hashing
+A hash map stores key-frequency or key-presence information. It changes many pairwise O(n^2) comparisons into average O(n) counting. Use an array for a small known domain and an ordered map when sorted keys are required. Define tie rules explicitly.
+
+Basic strings
+Clarify case, whitespace, encoding, and punctuation. Mirrored comparisons solve palindrome checks. Frequency arrays work for a known alphabet; maps handle arbitrary characters. getline reads spaces while token input stops at whitespace.
+
+Revision questions: Is the domain bounded? Can sorting simplify the problem? Is order important? Which edge case makes an index invalid? What exactly does frequency mean in a tie?

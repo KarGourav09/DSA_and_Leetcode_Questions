@@ -1,0 +1,14 @@
+FLOWCHARTS AND PSEUDOCODE
+
+A flowchart represents control flow with standard shapes: oval for start/end, parallelogram for input/output, rectangle for a process, and diamond for a decision. Arrows show execution order.
+
+Pseudocode is language-independent structured English. Example for maximum of an array:
+
+READ n and array a
+best <- a[0]
+FOR each value x from a[1] to a[n-1]
+    IF x > best
+        best <- x
+OUTPUT best
+
+Good pseudocode names the data, shows every branch, and avoids language-specific syntax. It exposes missing cases before implementation and makes peer review easier.

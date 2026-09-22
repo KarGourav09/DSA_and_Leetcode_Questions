@@ -1,0 +1,14 @@
+BASIC HASHING
+
+Use an array frequency table when keys come from a small known range. Use unordered_map for general integer or string keys, and unordered_set when only membership matters. Use map/set when sorted order or predictable logarithmic complexity is required.
+
+Typical workflow:
+1. Identify the state that must be remembered.
+2. Choose key -> value, key -> count, or key membership.
+3. Decide whether first occurrence, last occurrence, or every occurrence is needed.
+4. Initialize the empty prefix state before scanning.
+5. State average and worst-case complexity.
+
+Examples include duplicate detection, two-sum, character frequencies, longest subarray with a target sum, zero-sum ranges, and subarray XOR queries.
+
+Hashing uses extra memory proportional to the number of distinct keys. Clear the map between independent test cases.

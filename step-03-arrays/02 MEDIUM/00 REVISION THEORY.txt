@@ -1,0 +1,15 @@
+ARRAYS - MEDIUM REVISION THEORY
+
+Kadane's algorithm
+Track the best subarray ending at the current index and the best answer seen. The local recurrence is current=max(value,current+value). Reset or restart when the old sum hurts the next segment. Handle all-negative arrays by initializing from the first element.
+
+Rearrangement and permutations
+Rearrange by sign with two output positions or an in-place strategy. Next permutation finds the longest non-increasing suffix, swaps the right pivot with the next larger value, then reverses the suffix.
+
+Matrix problems
+For spiral traversal, maintain top, bottom, left, and right boundaries and guard the final row/column to avoid duplicates. For set-zeroes, record whether the first row/column contain zero before using them as markers. Rotate a square matrix by transpose followed by reversing rows.
+
+Majority and leaders
+Boyer-Moore finds a possible majority candidate, which must be verified. Leaders are values greater than every value to their right, so scan from the right while tracking a suffix maximum.
+
+Always distinguish subarray, subsequence, and subset; they have different constraints and solutions.

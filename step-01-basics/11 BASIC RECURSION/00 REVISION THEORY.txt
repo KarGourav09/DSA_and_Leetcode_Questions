@@ -1,0 +1,20 @@
+BASIC RECURSION - REVISION THEORY
+
+A recursive algorithm has a base case, a smaller subproblem, and a combination step. Every call must progress toward the base case. The call stack consumes space equal to the maximum active depth.
+
+Parameter patterns
+An index parameter processes a suffix of an array/string. Left and right parameters process a shrinking interval. An accumulator carries a partial answer. State the meaning of each parameter before writing the function.
+
+Core exercises
+Sum and factorial reduce n by one. Array sum moves an index forward. Reversal and palindrome checks move both ends inward. Prime checking tests divisors up to sqrt(n). Sorted checking compares adjacent values and advances an index. Digit sum removes one digit each call.
+
+Fibonacci
+The direct recurrence F(n)=F(n-1)+F(n-2) repeats subproblems, giving exponential time and O(n) stack. Memoization or bottom-up dynamic programming reduces time to O(n).
+
+Proof technique
+Use induction: prove the base case, assume the recursive result is correct for the smaller input, then show the current combination produces the correct answer.
+
+Common mistakes
+No base case, no progress, incorrect index bounds, mutating shared state unexpectedly, and reporting only explicit memory while forgetting stack space.
+
+Revision questions: What does each parameter mean? What is the maximum depth? Are subproblems repeated? Can the recursion be replaced with iteration or memoization?

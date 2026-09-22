@@ -1,0 +1,17 @@
+RECURSION - SUBSEQUENCES REVISION THEORY
+
+A subsequence is formed by deciding for every element whether to take or skip it; relative order remains unchanged. For n elements there can be 2^n choices, so enumeration is exponential.
+
+Template
+At index i, branch into skip and take. At i==n, evaluate or record the current path. For sum-K problems, carry the current sum and prune only when the constraints justify pruning. Count branches by returning count(skip)+count(take).
+
+Subsets with duplicates
+Sort first, then skip equal choices at the same recursion depth. This removes duplicate sets without skipping values at different depths.
+
+Combination sum
+If reuse is allowed, recurse at the same index after taking a value; otherwise move to the next index. Sort candidates to enable early stopping when values exceed the remaining target.
+
+Phone combinations and binary strings
+The same choose-from-a-list template applies. State includes the index and current output. Ensure every branch appends and then removes its character.
+
+Revision questions: Is order relevant? Can a value be reused? Where should duplicate skipping occur? What is the recursion-tree size?

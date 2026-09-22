@@ -1,0 +1,17 @@
+BIT AND NUMBER THEORY - REVISION THEORY
+
+Bit manipulation often turns arithmetic structure into constant-time operations, but bounds and integer representation still matter.
+
+Prime counting
+The Sieve of Eratosthenes marks composite multiples beginning at p*p. It counts primes through N in O(N log log N) time and O(N) memory. Use a wide type for p*p.
+
+Divisors
+Divisors occur in pairs d and n/d. Iterate d through sqrt(n), add both members, and avoid adding the square root twice. Sorting is separate from enumeration.
+
+Two unique numbers
+XOR every input to obtain a^b. Choose the lowest set bit of that XOR to partition values into two groups; each duplicate remains in one group and the two unique values separate.
+
+Bit-width discipline
+The expression 1<<i may overflow or use signed arithmetic; use 1u or a wider unsigned type when appropriate. Do not shift by a negative amount or by a value equal to the type width. State whether numbers are non-negative.
+
+Revision questions: What is the numeric bound? Can multiplication overflow? Is the algorithm using a bit identity valid for signed values? Is output order relevant?

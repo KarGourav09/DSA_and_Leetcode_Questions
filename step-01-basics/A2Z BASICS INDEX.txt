@@ -1,0 +1,32 @@
+STRIVER A2Z BASICS - LOCAL INDEX
+
+This folder mirrors the beginner portion of the latest TakeUForward Striver A2Z DSA sheet requested for this repository. The numbered folders below are the single retained learning track; the older duplicate folders were removed.
+
+01 FUNDAMENTALS OF PROGRAMMING - 7 lessons + revision theory
+02 LANGUAGE BASICS - 4 lessons + revision theory
+03 PATTERNS - 22 runnable C++ pattern programs + revision theory
+04 TIME COMPLEXITY - 1 lesson + revision theory
+05 STANDARD LIBRARIES AND COLLECTIONS - 3 lessons + revision theory
+06 CONCEPT BASICS - 4 lessons + revision theory
+07 BASIC MATHS - 13 runnable C++ programs + revision theory
+08 BASIC ARRAYS - 4 runnable C++ programs + revision theory
+09 BASIC HASHING - 3 runnable C++ programs + revision theory
+10 BASIC STRINGS - 8 runnable C++ programs + revision theory
+11 BASIC RECURSION - 10 runnable C++ programs + 2 theory lessons + revision theory
+
+C++ practice input convention:
+- Array programs read n followed by n values.
+- String programs use cin for token input and getline when spaces matter.
+- Boolean programs print 1 for true and 0 for false.
+- Pattern programs read n.
+
+Compile one file from its directory:
+g++ -std=c++17 -Wall -Wextra "file.cpp" -o program
+
+References:
+- TakeUForward A2Z DSA sheet: https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/
+- C++ language/library reference: https://en.cppreference.com/w/cpp.html
+- Python standard library reference: https://docs.python.org/3/library/
+- Java collections overview: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/package-summary.html
+
+The exercises are original study notes and implementations based on the requested topics. Verify problem-specific constraints against the current sheet before submitting to an online judge.

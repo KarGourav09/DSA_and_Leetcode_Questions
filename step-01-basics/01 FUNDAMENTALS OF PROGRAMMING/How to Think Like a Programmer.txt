@@ -1,0 +1,17 @@
+HOW TO THINK LIKE A PROGRAMMER
+
+1. Restate the problem in your own words.
+2. List exact inputs, outputs, constraints, and invalid cases.
+3. Solve a tiny example by hand.
+4. Identify repeated work and useful invariants.
+5. Choose a simple baseline, then improve it only when needed.
+6. Separate the algorithm from input/output code.
+7. Test normal, smallest, largest, duplicate, empty, and adversarial cases.
+
+Useful questions:
+- What must remain true after every loop iteration?
+- Can I sort, count, hash, or use two pointers?
+- What is the cost of each operation?
+- Does the solution still work for negative values and overflow?
+
+A solution is complete when its result is correct, its assumptions are clear, and its resource use fits the constraints.

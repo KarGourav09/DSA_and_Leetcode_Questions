@@ -1,0 +1,12 @@
+SORTING 2 - REVISION THEORY
+
+Merge sort
+Divide the range into halves, recursively sort each half, then merge two sorted ranges. The merge invariant says the output prefix is the smallest not-yet-copied value from either half. Recurrence T(n)=2T(n/2)+O(n), so time is O(n log n), auxiliary space O(n), and the usual merge is stable.
+
+Quick sort
+Choose a pivot and partition so values on one side are no greater and values on the other are no smaller. Recursively sort the partitions. Average time is O(n log n), worst time O(n^2) for poor pivots, expected stack O(log n) with balanced partitions. Randomized or median-based pivots reduce bad-case likelihood but do not change the worst-case guarantee.
+
+Recursive bubble and insertion sort
+The recursive version reduces the unsorted boundary or increases the sorted prefix on each call. Each has O(n^2) worst time and O(n) recursion stack; base cases handle n<=1.
+
+Comparison checklist: partition versus merge, stability, in-place behavior, auxiliary memory, pivot quality, and recursion depth.

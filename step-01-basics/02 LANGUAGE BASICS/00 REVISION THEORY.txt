@@ -1,0 +1,18 @@
+LANGUAGE BASICS - REVISION THEORY
+
+C++ essentials
+Use main, headers, namespaces, variables, operators, conditions, loops, functions, arrays, vector, string, references, and const. Pass a read-only large object by const reference. Use long long for sums that may exceed int. Understand value copies versus references and object lifetime.
+
+Python essentials
+Know indentation, dynamic types, list, tuple, dict, set, slicing, functions, and mutability. list is a dynamic array; dict and set are average O(1) for lookup; deque is appropriate for both ends; heapq is a min-heap. Avoid accidental aliasing of nested lists.
+
+Java and language choice
+A language is a translation tool for an algorithm. C++ offers control and STL, Python offers concise experimentation, and Java offers a strongly typed portable collection ecosystem. Learn one language deeply before translating algorithms.
+
+Core practice ladder
+Read input and print output; write conditions and loops; create functions; process arrays and strings; count frequencies; sort; use recursion; then combine these skills in medium and hard exercises.
+
+Common mistakes
+Mixing up assignment and comparison, using an invalid index, integer division surprises, overflow, mutating while iterating, and assuming input has no empty case. Compile with warnings and test boundaries.
+
+Revision questions: What is copied? What is referenced? What is the complexity of a built-in operation? Does input contain spaces? Which integer type can hold the answer?

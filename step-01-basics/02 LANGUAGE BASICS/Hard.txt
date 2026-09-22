@@ -1,0 +1,5 @@
+LANGUAGE BASICS - HARD PRACTICE
+
+Hard language exercises should combine syntax with reasoning: custom classes, comparator design, recursion with backtracking, iterators, memory ownership, large input handling, and translating an algorithm between C++, Python, and Java.
+
+Before optimizing, establish correctness on small cases. Measure only after identifying a bottleneck. In C++, understand lifetime and references; in Python, understand mutability and object aliasing; in Java, understand references and collection interfaces.

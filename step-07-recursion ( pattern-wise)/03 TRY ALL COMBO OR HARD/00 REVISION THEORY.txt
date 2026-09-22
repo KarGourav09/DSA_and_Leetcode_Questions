@@ -1,0 +1,17 @@
+RECURSION - HARD REVISION THEORY
+
+Hard backtracking problems search a state space while maintaining a validity invariant. At each step choose a candidate, reject immediately if it violates constraints, recurse, then undo the choice.
+
+N Queens and M Coloring
+Track occupied columns and diagonals for queens. For graph coloring, assign a color only when no adjacent vertex has it. The first valid complete assignment proves feasibility.
+
+Sudoku
+Select an empty cell and try digits consistent with its row, column, and box. Bit masks can make validity checks O(1). Always restore the cell during backtracking.
+
+Rat in a maze and word search
+Mark a cell before recursion and unmark it afterward. Boundary checks and visited state prevent cycles. The path state is local to the current branch.
+
+Palindrome partitioning and expression operators
+Generate every cut or operator choice, validate the partial result, and recurse. Pruning and memoization can reduce repeated work.
+
+Complexity is often exponential; explain the branching factor, depth, pruning, and auxiliary state instead of hiding them behind a single Big-O label.

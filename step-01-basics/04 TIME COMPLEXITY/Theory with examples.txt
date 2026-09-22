@@ -1,0 +1,19 @@
+TIME COMPLEXITY - THEORY WITH EXAMPLES
+
+Time complexity describes how operation count grows with input size n; space complexity describes additional memory. Ignore constants and lower-order terms for asymptotic analysis.
+
+O(1): access a vector element by index.
+O(log n): binary search halves the search interval.
+O(n): one pass through an array.
+O(n log n): merge sort and efficient comparison sorting.
+O(n^2): two nested loops over n items.
+O(2^n): enumerate all subsets recursively.
+O(n!): enumerate all permutations.
+
+Examples:
+for (i=0; i<n) is O(n).
+for (i=1; i<n; i*=2) is O(log n).
+Two independent loops are O(n), while nested loops are O(n^2).
+
+Count the dominant operation, include input size dimensions, and account for recursion stack. Worst-case analysis is the usual default; mention best or amortized cases when relevant.
+Reference: https://en.cppreference.com/w/cpp/container

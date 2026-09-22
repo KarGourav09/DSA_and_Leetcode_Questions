@@ -1,0 +1,5 @@
+CONCEPT BASICS - BASIC STRING
+
+A string is a sequence of characters. Basic operations include indexing, length, comparison, reversal, and frequency counting. In C++, std::string is mutable and supports iterators; input with cin stops at whitespace, while getline reads a full line.
+
+For ASCII lowercase letters, array[26] is enough. For arbitrary text, use a map and clarify case sensitivity and whitespace rules. Palindrome checks compare mirrored positions. Building a result repeatedly can be O(n^2); reserve capacity or use a result buffer when needed.

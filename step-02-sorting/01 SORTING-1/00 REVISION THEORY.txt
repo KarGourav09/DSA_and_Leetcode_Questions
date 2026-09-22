@@ -1,0 +1,14 @@
+SORTING 1 - REVISION THEORY
+
+Sorting rearranges values into an order so later operations become easier. Always state whether the sort is ascending, stable, in-place, and whether duplicate values are preserved.
+
+Selection sort
+At position i, find the smallest value in the unsorted suffix and swap it into place. The prefix before i is the invariant: it is sorted and contains the i smallest values. Time is O(n^2), space O(1), and swaps are at most O(n). It is not stable in the usual swap implementation.
+
+Bubble sort
+Repeatedly compare adjacent values and swap inversions. After each pass, the largest remaining value reaches the right boundary. A swapped flag can stop early for an already sorted array. Worst time O(n^2), best time O(n) with the flag, space O(1), stable.
+
+Insertion sort
+Maintain a sorted prefix and insert the next value by shifting larger elements right. The invariant is that the processed prefix is sorted. Worst time O(n^2), best time O(n), space O(1), stable, and useful for nearly sorted input.
+
+Common mistakes: wrong loop bounds, losing duplicates, confusing comparison count with swaps, and claiming O(n log n) for quadratic algorithms.

@@ -1,0 +1,14 @@
+SINGLY LINKED LIST - REVISION THEORY
+
+A singly linked list stores a value and a pointer to the next node. The head identifies the first node; a null next pointer marks the end. Nodes are not contiguous, so indexing is O(n), while insertion or deletion is O(1) when the correct node or predecessor is already known.
+
+Traversal
+Start at head and repeatedly move current=current->next until null. Never dereference a null pointer. Keep a separate head update when an operation changes the first node.
+
+Insertion and deletion
+Insert at head by making the new node point to head, then returning the new node. Insert at tail by tracking the last node. For deleting the head, save head->next and release the old node. For deleting a kth node or value X, track the predecessor and reconnect predecessor->next to target->next.
+
+Invariants
+At every step, processed nodes remain reachable in their original order. A deletion must preserve the suffix and must not lose the successor before changing links.
+
+Edge cases: empty list, one node, deleting the head/tail, missing value, duplicate values, and k outside the list. In C++, delete allocated nodes when ownership ends.

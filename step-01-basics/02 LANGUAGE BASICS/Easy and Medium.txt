@@ -1,0 +1,7 @@
+LANGUAGE BASICS - EASY AND MEDIUM PRACTICE
+
+Easy practice: read two values, maximum of three values, even/odd, sum 1..N, count digits, reverse a number, array sum, linear search, reverse a string, and frequency counting.
+
+Medium practice: second largest element, rotate an array, prefix sums, two-sum with hashing, longest subarray under a condition, matrix traversal, recursion, and sorting with a custom comparator.
+
+For every problem record: brute-force idea, optimized idea, invariant, complexity, edge cases, and one hand-worked example. Do not jump to library calls until the underlying algorithm is understood.

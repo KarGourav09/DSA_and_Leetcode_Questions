@@ -1,0 +1,11 @@
+BINARY SEARCH 2D - REVISION THEORY
+
+A matrix can be searched by flattening row and column indices when rows are globally ordered: row=index/columns and column=index%columns. This gives O(log(rows*columns)) search.
+
+For a row-wise sorted matrix whose rows are not globally ordered, first find the most promising row or use a staircase walk if columns are sorted. A staircase search starts at the top-right: move left when the value is too large and down when it is too small, giving O(rows+columns).
+
+For maximum ones, exploit sorted rows: binary-search each row's first one and keep the row with the smallest index. A 2D peak moves toward a larger neighboring column using a maximum search in the chosen column.
+
+Matrix median problems binary-search the answer value and count elements <= mid with upper bounds in each row. The value range, not the matrix index range, is the search domain.
+
+Always define whether rows, columns, or the entire matrix are sorted.

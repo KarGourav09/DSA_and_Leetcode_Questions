@@ -1,0 +1,14 @@
+DOUBLY LINKED LIST - REVISION THEORY
+
+A doubly linked list node has data, next, and prev pointers. It supports movement in both directions and deletion when a node pointer is known, but each node uses more memory and every link change needs two-way maintenance.
+
+Insertion template
+To insert node X before node B, let A=B->prev, connect A->next=X when A exists, set X->prev=A, X->next=B, and set B->prev=X. Update head or tail when inserting at an endpoint.
+
+Deletion template
+Save previous and next neighbors, connect previous->next to next and next->prev to previous, then update head/tail and delete the removed node. Isolated nodes have both links null.
+
+Conversion
+Build a list from an array by tracking tail. Every node except head must have prev pointing to its predecessor; every node except tail must have next pointing to its successor.
+
+Debugging invariant: for every adjacent pair A and B, A->next==B implies B->prev==A. Check both directions after each mutation.

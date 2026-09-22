@@ -1,0 +1,14 @@
+DRY RUNS, EDGE CASES AND DEBUGGING
+
+A dry run records variables after each meaningful step. Use a table with iteration number, condition values, and updated state. It catches off-by-one errors faster than random testing.
+
+Always test:
+- empty input where permitted;
+- one element;
+- all equal values;
+- already sorted and reverse sorted data;
+- negative and zero values;
+- maximum constraint values;
+- duplicate values and repeated characters.
+
+Debugging workflow: reproduce -> reduce to the smallest failing input -> inspect the first incorrect state -> form one hypothesis -> change one thing -> rerun regression tests. Compiler errors are syntax/type problems; runtime errors are execution problems; wrong answers are logic or assumption problems.

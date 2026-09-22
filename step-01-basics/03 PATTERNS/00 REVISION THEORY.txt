@@ -1,0 +1,24 @@
+PATTERNS - REVISION THEORY
+
+Pattern problems train nested loops, row/column reasoning, spaces, and output control. Let row run from 1 to N. Derive the number of printed items from row instead of memorising code.
+
+Common formulas
+- Square: N rows, N columns.
+- Increasing triangle: row items.
+- Decreasing triangle: N - row + 1 items.
+- Pyramid: N - row spaces and 2*row - 1 symbols.
+- Diamond: combine an increasing and decreasing pyramid.
+- Hollow shape: print only borders; interior positions are spaces.
+- Number/alphabet patterns: derive the value from row, column, or a running counter.
+- Concentric pattern: distance from the nearest border determines the layer value.
+
+Method
+Draw the expected output for N=3. Label every position (row, column). Ask whether the character depends on row, column, both, or distance to an edge. Implement spaces and symbols as separate loops when that makes the formula clear.
+
+Complexity
+A displayed N by N region costs O(N^2) time even when many positions are spaces. Extra algorithmic space is normally O(1), excluding output buffering.
+
+Common mistakes
+Using <= where < is intended, printing the wrong number of leading spaces, forgetting the last newline, assuming N is positive, and using a character expression outside its alphabet range.
+
+Revision questions: How many symbols are in row r? How many leading spaces? Which cells are borders or diagonals? What changes for N=1?

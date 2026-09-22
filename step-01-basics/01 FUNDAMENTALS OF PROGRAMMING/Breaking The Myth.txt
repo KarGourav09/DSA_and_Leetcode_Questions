@@ -1,0 +1,17 @@
+FUNDAMENTALS OF PROGRAMMING - BREAKING THE MYTH
+
+Programming is not memorising syntax or solving only difficult mathematics. It is the disciplined process of expressing a problem as precise steps that a computer can execute.
+
+Core ideas:
+1. Understand the input, output, constraints, and edge cases.
+2. Write a brute-force idea before optimizing.
+3. Choose data structures that make required operations cheap.
+4. Prove or test the idea with examples and dry runs.
+5. Analyse time and space complexity.
+6. Implement, compile, debug, and revise.
+
+A strong programmer can transfer the same logic between C++, Python, Java, or JavaScript. Syntax is the final translation layer; reasoning is the transferable skill.
+
+Practice loop: observe -> model -> solve manually -> write pseudocode -> code -> test -> improve.
+
+Reference: https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/

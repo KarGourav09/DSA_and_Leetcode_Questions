@@ -1,0 +1,16 @@
+STANDARD LIBRARIES AND COLLECTIONS - STL AND JAVA COLLECTIONS
+
+C++ STL:
+- vector: dynamic contiguous array; random access O(1), append amortized O(1).
+- deque: efficient insertion at both ends.
+- list: linked list; iterator insertion is O(1), no random access.
+- stack and queue: restricted adapters.
+- priority_queue: heap; top O(1), push/pop O(log n).
+- set/map: ordered tree structures; operations O(log n).
+- unordered_set/unordered_map: hash tables; average O(1), worst O(n).
+- algorithms: sort, reverse, lower_bound, count, accumulate.
+
+Java collections:
+ArrayList, LinkedList, ArrayDeque, PriorityQueue, TreeSet, TreeMap, HashSet, and HashMap serve similar roles. Check ordering, duplicate policy, null policy, and complexity before choosing.
+
+Reference: https://en.cppreference.com/w/cpp/container

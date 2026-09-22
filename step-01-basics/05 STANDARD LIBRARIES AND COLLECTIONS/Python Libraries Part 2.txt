@@ -1,0 +1,10 @@
+PYTHON LIBRARIES PART 2
+
+heapq implements a min-heap: heappush and heappop are O(log n), heapify is O(n). Use negative values for a max-heap pattern.
+bisect provides binary-search insertion points in sorted lists.
+math provides gcd, lcm, isqrt, ceil, and inf-related helpers.
+itertools provides combinations, permutations, product, and accumulate.
+functools provides lru_cache for memoization.
+collections provides deque, Counter, defaultdict, and namedtuple.
+
+For performance, avoid repeated string concatenation in loops; collect pieces and use ''.join. Avoid deleting from the front of a list; use deque.

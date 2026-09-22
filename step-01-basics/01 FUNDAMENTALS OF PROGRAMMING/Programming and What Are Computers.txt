@@ -1,0 +1,15 @@
+PROGRAMMING AND WHAT ARE COMPUTERS
+
+A computer is a programmable machine that stores data and executes instructions. The processor performs operations, memory stores working data, persistent storage keeps data between runs, and input/output devices communicate with the outside world.
+
+A program represents an algorithm in a language. Source code is translated or interpreted; the running program receives input, transforms state, and produces output.
+
+Important vocabulary:
+- Algorithm: finite, unambiguous steps for a task.
+- Variable: named storage whose value may change.
+- Data type: rules for representation and operations.
+- Control flow: sequence, selection, and repetition.
+- Function: reusable unit with inputs and a result.
+- State: values held by the program at a moment.
+
+Everyday example: making tea can be modelled as ordered steps, decisions such as whether water is boiling, and repetition such as stirring. Good algorithms make these assumptions explicit.

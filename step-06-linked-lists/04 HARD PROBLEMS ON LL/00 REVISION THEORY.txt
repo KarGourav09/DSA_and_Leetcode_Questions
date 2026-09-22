@@ -1,0 +1,18 @@
+HARD LINKED-LIST PROBLEMS - REVISION THEORY
+
+Reverse in groups
+Process one group of K nodes only when K complete nodes remain. Reverse the group, connect its tail to the recursively or iteratively processed remainder, and preserve the next group before rewiring. If the final group is shorter than K, follow the problem's required policy.
+
+Rotate list
+Find length and tail, reduce k modulo length, connect tail to head temporarily, then break at the new tail. Handle k=0 and an empty list before making a cycle.
+
+Merge and sort
+Merge sorted lists by repeatedly selecting the smaller head and use a dummy node. Merge sort splits at the middle, recursively sorts halves, and merges them in O(n log n) time and O(log n) recursion stack.
+
+Flattening
+When nodes have child or bottom links, recursively flatten the subordinate list and merge it with the current list. Clearly define whether order follows next, child, or bottom pointers.
+
+Copy random list
+Use a map from original node to copy, or interleave copied nodes to achieve O(1) auxiliary space. Every random pointer must map to the corresponding copy, including null.
+
+Pointer safety is the central proof obligation: save successors before mutation and avoid accidental cycles.

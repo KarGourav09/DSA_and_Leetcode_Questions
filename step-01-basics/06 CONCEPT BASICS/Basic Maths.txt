@@ -1,0 +1,12 @@
+CONCEPT BASICS - BASIC MATHS
+
+Use modulo for divisibility and digit extraction: last digit = n % 10, remove last digit with n /= 10 for integer n. Watch negative values and integer overflow.
+
+Important tools:
+- Euclidean algorithm for GCD: gcd(a,b)=gcd(b,a%b).
+- LCM: abs(a/gcd(a,b)*b), divide first to reduce overflow.
+- Prime test: try divisors through sqrt(n).
+- Divisors occur in pairs d and n/d; iterate to sqrt(n).
+- Sieve of Eratosthenes counts or lists primes up to N in O(N log log N).
+
+Always define behavior for zero, one, and negative inputs.

@@ -1,0 +1,13 @@
+HASHING - REVISION THEORY
+
+Hashing maps a key to a bucket using a hash function. It is useful when the answer depends on prior values, frequencies, membership, or prefix states. Average insertion and lookup are O(1); worst-case hash behavior can degrade, while ordered maps provide O(log n).
+
+Frequency hashing counts values or characters. Presence hashing uses a set. Prefix hashing stores information about all elements before an index so a subarray can be recognized by the difference between two prefixes.
+
+For sum K, if currentPrefix-K was seen, every earlier occurrence forms a valid subarray ending here. Store the earliest index for longest length, but store counts for number of subarrays. Initialize prefix zero at index -1.
+
+For XOR K, use the identity prefixXor[l-1] XOR prefixXor[r] = subarrayXor(l,r), so the required previous value is currentXor XOR K.
+
+Longest consecutive sequence uses a set and starts a scan only when value-1 is absent, giving average O(n) instead of sorting O(n log n).
+
+Common mistakes: forgetting the zero prefix, overwriting the earliest index, using a sliding window when negatives are allowed, confusing sum and XOR, and failing to state tie rules.

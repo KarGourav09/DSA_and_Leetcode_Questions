@@ -1,0 +1,7 @@
+CONCEPT BASICS - BASIC HASHING
+
+Hashing maps a key to a bucket so average lookup, insertion, and deletion are O(1). Use a frequency map when the problem asks how often values occur, or a membership set when only presence matters.
+
+Hashing can replace nested comparisons: count first, then answer queries. For a small bounded domain, a vector frequency array is faster and simpler than a hash map. Ordered maps provide sorted keys but cost O(log n).
+
+Account for duplicate values and the distinction between highest frequency and first occurrence on ties.

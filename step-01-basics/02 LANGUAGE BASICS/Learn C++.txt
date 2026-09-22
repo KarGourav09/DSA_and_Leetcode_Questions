@@ -1,0 +1,13 @@
+LANGUAGE BASICS - LEARN C++
+
+Start with compilation, main, headers, namespaces, input/output, variables, primitive types, operators, conditions, loops, functions, arrays, strings, references, and structs/classes.
+
+DSA essentials:
+- use vector for dynamic arrays;
+- pass large objects by const reference when not modifying;
+- use long long for large sums;
+- prefer std::string and STL algorithms;
+- understand iterators and range-based for loops;
+- compile with warnings and test boundary cases.
+
+Typical compile command: g++ -std=c++17 -Wall -Wextra file.cpp -o program

@@ -1,0 +1,13 @@
+DOUBLY LINKED-LIST FAQS - REVISION THEORY
+
+Delete all occurrences
+Traverse with a saved next pointer because the current node may be deleted. For every matching node, reconnect both neighbors and update head/tail. Continue until the original list is exhausted.
+
+Remove duplicates from sorted DLL
+Because values are sorted, duplicates are adjacent. Compare current with current->next; remove the successor when equal, otherwise advance. Keep prev and next links consistent.
+
+Find pairs with a target sum
+Use two pointers at head and tail because the list is sorted. If sum is too small, move the left pointer forward; if too large, move the right pointer backward; on equality move both. Stop when pointers meet or cross.
+
+Complexity
+A one-pass deletion is O(n). Two-pointer pair search is O(n) time and O(1) extra space when the list is sorted. Pointer mutation must preserve the bidirectional invariant.

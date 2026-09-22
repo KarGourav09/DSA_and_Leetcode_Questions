@@ -1,0 +1,15 @@
+RECURSION - GET A STRONG HOLD REVISION THEORY
+
+This section builds recursion fluency through state, base cases, and backtracking. Each call must reduce the unresolved work or move an index toward termination.
+
+Power
+For exponentiation, repeated multiplication is O(n); exponentiation by squaring reduces it to O(log n). Negative exponents require a reciprocal and a wide numeric type.
+
+Stack sorting and reversal
+Use the call stack to remove one item, solve the smaller stack, then insert or place the removed item in its correct position. The recursive depth is O(n); sorting a stack by insertion is commonly O(n^2).
+
+String to integer
+Process digits left to right with value=value*10+digit. Validate sign, non-digit characters, and overflow before updating.
+
+Good-number counting and combinations
+Define the state precisely, avoid leading-zero ambiguity, and prune branches that cannot satisfy the constraints. Backtracking means choose, recurse, and undo the choice.

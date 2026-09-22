@@ -1,0 +1,17 @@
+STANDARD LIBRARIES AND COLLECTIONS - REVISION THEORY
+
+Choose a collection from required operations, ordering, duplicates, and memory layout.
+
+C++ STL
+vector is contiguous and provides O(1) indexing; deque supports both ends; list supports iterator insertion but lacks random access; stack and queue restrict access; priority_queue exposes the maximum by default with O(log n) insertion/removal; set/map are ordered and usually O(log n); unordered_set/unordered_map hash keys with average O(1) operations.
+
+Algorithms
+sort, reverse, lower_bound, upper_bound, count, find, min_element, max_element, and accumulate reduce boilerplate. Verify whether an algorithm requires sorted input and whether it mutates the range.
+
+Python and Java parallels
+Python list is a dynamic array, dict/set are hash tables, deque handles both ends, heapq is a min-heap, and Counter counts frequencies. Java ArrayList, ArrayDeque, PriorityQueue, TreeMap/TreeSet, and HashMap/HashSet provide analogous choices.
+
+Complexity checklist
+Random access, end insertion, front insertion, ordered lookup, hash lookup, heap top, and sorting have different costs. Never choose a structure only because its name sounds familiar.
+
+Revision questions: Must keys be sorted? Are duplicates allowed? Do I need the smallest or largest item repeatedly? Is the data contiguous? What is the worst-case hash behavior?

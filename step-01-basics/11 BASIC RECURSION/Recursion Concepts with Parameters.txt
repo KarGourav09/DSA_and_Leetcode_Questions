@@ -1,0 +1,8 @@
+BASIC RECURSION - CONCEPTS WITH PARAMETERS
+
+Parameters carry the state of a recursive computation. A common pattern is an index i:
+solve(i) processes position i and calls solve(i+1). For two-pointer problems, pass left and right. For an accumulator, pass the partial answer explicitly.
+
+Example invariant for recursive array sum: sum(values, i) returns the sum from i through the end. Base case i == size returns 0; recursive case returns values[i] + sum(values, i+1).
+
+Prefer const references for read-only collections. Ensure every branch changes a parameter toward termination. Complexity is the number of calls times work per call plus maximum stack depth.

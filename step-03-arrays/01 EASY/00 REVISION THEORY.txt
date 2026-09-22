@@ -1,0 +1,14 @@
+ARRAYS - EASY REVISION THEORY
+
+Start with a linear scan and state the invariant after processing the first i values. Array indexing is O(1), a scan is O(n), and in-place transformations use O(1) auxiliary space.
+
+Core ideas
+Linear search checks every position. Largest and second-largest problems need careful initialization and duplicate policy. Missing-number problems use a sum, XOR, or index-marking strategy depending on constraints. A single-number problem uses XOR because equal values cancel.
+
+Rotation
+Left rotation by one shifts values and stores the first value. Rotation by k can be reduced with k%=n and solved by reversal or a temporary buffer. Move-zeroes keeps non-zero values in a compact prefix and fills the suffix with zeroes.
+
+Sorted arrays
+Two sorted arrays can be unioned or intersected with two pointers. Skip duplicates according to the output requirement. Longest-subarray tasks require checking whether all elements, positives, or negatives are allowed before choosing a sliding window or prefix-sum method.
+
+Edge cases: empty input, one value, all equal values, negative values, k larger than n, and duplicate endpoints.

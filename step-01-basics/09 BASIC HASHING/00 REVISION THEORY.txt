@@ -1,0 +1,17 @@
+BASIC HASHING - REVISION THEORY
+
+Hashing stores a key and its associated information in a table. A frequency map increments count[key] for every occurrence. Average insertion and lookup are O(1), while worst-case behavior depends on collisions; an ordered map gives O(log n) guarantees and sorted keys.
+
+Highest occurring element
+Count all values, then keep the largest frequency. If a deterministic answer is needed, state the tie rule; the supplied ordered-map solution chooses the smallest value on a tie.
+
+Second highest occurring element
+First determine the largest and second distinct frequency. Then scan for a value with the second frequency. If no distinct second frequency exists, report that explicitly.
+
+Sum of highest and lowest frequency
+For each distinct key, compare its count with the current minimum and maximum. The answer is the two frequencies, not the key values.
+
+Common mistakes
+Confusing distinct elements with occurrences, forgetting the empty input, silently choosing a tie rule, and assuming hashing preserves insertion order.
+
+Revision questions: Do I need key presence or a count? Are frequencies distinct? What happens when every value occurs once? Is average O(1) acceptable?

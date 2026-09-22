@@ -1,0 +1,17 @@
+ARRAYS - HARD REVISION THEORY
+
+Three/four sum
+Sort first, fix one or two values, and use two pointers for the remainder. Skip equal values at every level to avoid duplicate tuples. Complexity depends on fixed positions and pointer scans.
+
+Intervals and merging
+Sort intervals by start, then merge when the next start is within the current end. The output invariant contains all merged intervals processed so far.
+
+Inversions and reverse pairs
+A merge-sort divide-and-conquer approach counts cross pairs while merging sorted halves. This reduces quadratic comparison to O(n log n). Use long long for counts and products.
+
+Majority II and XOR subarrays
+Boyer-Moore can track two candidates occurring more than n/3, but both require a final verification. Prefix XOR turns subarray XOR queries into a frequency lookup: if currentXor^k was seen, those prefixes form valid ranges.
+
+Maximum product requires tracking both maximum and minimum ending products because multiplying by a negative swaps their roles. Merge sorted arrays without extra space requires careful gap or partition logic.
+
+Check constraints first: duplicate policy, integer overflow, in-place requirement, and whether empty answers are legal.

@@ -1,0 +1,20 @@
+TIME COMPLEXITY - REVISION THEORY
+
+Time complexity estimates how operation count grows with input size; space complexity estimates extra memory. Big-O is an upper-growth classification, ignoring constants and lower-order terms.
+
+Growth order
+O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(n^3) < O(2^n) < O(n!). Choose the smallest practical growth that fits the constraints.
+
+Counting rules
+One loop over n items is O(n). A loop multiplying or dividing its counter by two is O(log n). Nested independent loops multiply; consecutive loops add and the dominant term remains. A loop that halves a search interval is logarithmic.
+
+Data-structure examples
+Array indexing is O(1), scanning is O(n), inserting in the middle is O(n), binary search on sorted data is O(log n), hash lookup is average O(1), and balanced ordered-map operations are O(log n). Sorting is usually O(n log n).
+
+Recursion
+Write a recurrence. A single call on n-1 gives depth O(n); two calls on n-1 may be exponential; divide-and-conquer often gives O(n log n). Include call-stack depth in space complexity.
+
+Amortized analysis
+A dynamic-array append is amortized O(1), although occasional resizing costs O(n). State average, worst-case, or amortized assumptions explicitly.
+
+Revision questions: What is the input dimension? What operation repeats most? Is hash performance average or worst case? Does recursion allocate stack frames?

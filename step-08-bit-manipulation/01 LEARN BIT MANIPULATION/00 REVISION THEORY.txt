@@ -1,0 +1,14 @@
+BIT MANIPULATION - REVISION THEORY
+
+Numbers are represented in binary. Bit i is tested with (x>>i)&1 or x&(1<<i), using zero-based indexing from the least significant bit.
+
+Operators
+AND keeps bits set in both operands. OR sets bits present in either operand. XOR sets differing bits and satisfies x^x=0, x^0=x, and associativity. NOT flips every fixed-width bit. Left shift by k multiplies an unsigned value by 2^k when no bits are lost; right shift divides by powers of two for non-negative values.
+
+Useful identities
+x&(x-1) clears the lowest set bit. x&-x isolates the lowest set bit for two's-complement integers. A positive power of two has exactly one set bit, so x>0 && (x&(x-1))==0. Count set bits by repeatedly clearing the lowest set bit.
+
+Set, clear, toggle, and remove
+Set bit i: x|(1<<i). Clear: x&~(1<<i). Toggle: x^(1<<i). Clear the rightmost set bit: x&(x-1).
+
+Use unsigned types for predictable shifts, avoid shifting by the type width, and understand signed overflow and two's-complement assumptions.

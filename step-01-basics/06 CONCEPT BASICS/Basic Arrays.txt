@@ -1,0 +1,7 @@
+CONCEPT BASICS - BASIC ARRAYS
+
+An array stores same-type values in contiguous memory. Index access is O(1), scanning is O(n), and insertion/deletion in the middle is O(n). Track the valid range carefully.
+
+Common patterns: running sum, minimum/maximum, two pointers, sliding window, frequency table, prefix sums, sorting, and in-place reversal. Prefer long long when a sum can exceed int.
+
+For an input of size zero, do not read a[0]. For reversal, swap a[left] with a[right] while left < right.

@@ -1,0 +1,12 @@
+PROGRAMMING LANGUAGES AND CHOOSING A PATH
+
+Choose a language based on the goal, ecosystem, and comfort rather than popularity alone.
+
+C++: fast, explicit memory and rich STL; common in competitive programming.
+Python: concise syntax, rapid experimentation, and strong scripting/data libraries.
+Java: portable, strongly typed, and widely used in enterprise systems.
+JavaScript/TypeScript: browser and server applications.
+
+For DSA, learn one language deeply: input/output, types, conditions, loops, functions, arrays, strings, recursion, standard collections, sorting, and debugging. Then translate familiar algorithms into another language.
+
+A practical path is: language basics -> complexity -> arrays and strings -> hashing -> sorting/searching -> recursion -> linked structures -> trees/graphs -> dynamic programming.

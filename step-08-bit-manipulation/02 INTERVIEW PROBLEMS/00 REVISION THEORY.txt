@@ -1,0 +1,18 @@
+BIT INTERVIEW PROBLEMS - REVISION THEORY
+
+XOR cancellation
+When every value appears twice except one, XOR all values: pairs cancel to zero and the unique value remains. For two unique values, XOR gives a differing bit; partition values by that bit and XOR each group separately. For values appearing three times, use per-bit counts modulo three.
+
+Minimum bit flips
+The number of differing bits between a and b is popcount(a^b). Count set bits with x&=x-1 or a library popcount.
+
+Divide without multiplication
+Use sign handling, absolute magnitudes, and repeated doubling of the divisor. Subtract the largest safe doubled divisor and accumulate the corresponding power of two. Guard overflow and the minimum signed integer case.
+
+Power set
+Each bitmask from 0 through 2^n-1 represents one subset; bit i decides whether element i is included. Enumeration costs O(n*2^n) time and O(n) output/path space.
+
+Range XOR
+Use prefix XOR patterns based on n modulo 4: XOR(1..n) is n, 1, n+1, 0 for residues 0,1,2,3. XOR(a..b)=prefix(b)^prefix(a-1).
+
+Revision questions: Which values cancel? What bit separates groups? Is the type signed? Can a shift or absolute value overflow?

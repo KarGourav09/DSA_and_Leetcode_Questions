@@ -1,0 +1,10 @@
+BASIC RECURSION - THEORY
+
+Recursion solves a problem by calling the same function on a smaller instance. Every correct recursive function needs:
+1. a base case that returns directly;
+2. progress toward the base case;
+3. a combination step that uses the smaller answer.
+
+The call stack stores parameters and local variables for every active call. A recursive solution can use O(depth) stack space even when it allocates no explicit container. Trace n=0, n=1, and a small non-base input before coding.
+
+Common forms: linear recursion, multiple-branch recursion, divide and conquer, backtracking, and tail recursion. Memoization removes repeated subproblems when the state can be identified.
