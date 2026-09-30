@@ -74,3 +74,11 @@ public:
         return sum;
     }
 };
+
+int main() {
+    Solution solution;
+    vector<int> nums = {4, -2, -3, 4, 1};
+    long long result = solution.subArrayRanges(nums);
+    cout << "Sum of subarray ranges: " << result << endl; // Output: 59
+    return 0;
+}
