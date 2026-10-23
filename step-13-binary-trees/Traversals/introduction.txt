@@ -1,0 +1,385 @@
+# Binary Trees: Introduction, Types, and Traversals
+
+## 1. What Is a Binary Tree?
+
+A binary tree is a hierarchical data structure in which each node has at most two children:
+
+- a left child
+- a right child
+
+Each node usually stores:
+
+1. a value
+2. a reference to its left child
+3. a reference to its right child
+
+Unlike an array, linked list, stack, or queue, a tree is non-linear. Its elements are organized through parent-child relationships across multiple levels.
+
+Example:
+
+```text
+        1
+       / \
+      2   3
+     / \   \
+    4   5   6
+```
+
+In this tree:
+
+- `1` is the root.
+- `2` and `3` are children of `1`.
+- `4` and `5` are children of `2`.
+- `6` is the right child of `3`.
+
+The left and right positions are meaningful. A node with only a left child is structurally different from a node with only a right child.
+
+![Binary Tree Structure](Binary%20Tree%20Structure.png)
+
+## 2. Why Use Binary Trees?
+
+Binary trees are useful when data or a problem naturally has a hierarchy or recursive structure. Common uses include:
+
+- representing hierarchical information
+- searching ordered data with a Binary Search Tree
+- implementing priority queues with a Binary Heap
+- representing arithmetic expressions
+- parsing programs with Abstract Syntax Trees
+- solving divide-and-conquer problems
+- representing decisions and game states
+- implementing range-query structures such as segment trees
+
+Several important structures are specialized binary trees, including Binary Search Trees, heaps, AVL trees, Red-Black trees, expression trees, Huffman trees, and segment trees.
+
+## 3. The Recursive Structure
+
+Every binary tree is either:
+
+- empty (`NULL`), or
+- a node containing a value, a left binary subtree, and a right binary subtree
+
+This definition explains why recursion is so common in tree algorithms:
+
+```text
+solve(node):
+    if node is NULL:
+        return
+
+    process node
+    solve(node.left)
+    solve(node.right)
+```
+
+Changing when the current node is processed produces different depth-first traversals.
+
+## 4. Basic Terminology
+
+| Term | Meaning |
+| --- | --- |
+| Node | An element containing a value and child references |
+| Root | The topmost node; it has no parent |
+| Edge | A connection between a parent and a child |
+| Parent | A node directly above another node |
+| Child | A node directly below another node |
+| Siblings | Nodes that have the same parent |
+| Leaf | A node with no children |
+| Internal node | A node with at least one child |
+| Ancestor | A node on the path from the root to another node |
+| Descendant | A node below another node |
+| Subtree | A node together with all of its descendants |
+| Path | A sequence of connected nodes |
+| Degree | The number of children of a node |
+| Depth | The number of edges from the root to a node |
+| Height of a node | The number of edges on the longest downward path to a leaf |
+| Height of a tree | The height of its root |
+
+For the example tree:
+
+- `1` is the root and the parent of `2` and `3`.
+- `2` is the left child of `1`; `3` is its right child.
+- `4`, `5`, and `6` are leaves.
+- `1`, `2`, and `3` are internal nodes.
+- The subtree rooted at `2` contains `2`, `4`, and `5`.
+- The ancestors of `5` are `1` and `2`; its parent is `2`.
+
+A single-node tree has one node that is both the root and a leaf. A node is normally not considered its own ancestor or descendant.
+
+![Binary Tree Terminology](Binary%20Tree%20Terminology.png)
+
+## 5. Depth, Level, and Height
+
+This guide uses zero-based depth and edge-based height.
+
+### Depth and Level
+
+The depth of a node is the number of edges from the root:
+
+- root: depth `0`
+- child of the root: depth `1`
+- grandchild of the root: depth `2`
+
+Many resources use the word *level* as a synonym for depth. Others number the root as level `1`. Always check the convention being used.
+
+### Height
+
+The height of a node is the number of edges on its longest path down to a leaf:
+
+- a leaf has height `0`
+- a node one edge above its deepest leaf has height `1`
+- the height of the tree is the height of the root
+
+For the example tree, nodes `4`, `5`, and `6` have height `0`, nodes `2` and `3` have height `1`, and node `1` has height `2`.
+
+Some implementations define height using the number of nodes rather than edges. Under that convention, the height values differ by one. Use one convention consistently.
+
+## 6. Important Properties
+
+Assume the root is at level `0` and height is measured in edges.
+
+| Property | Formula or result |
+| --- | --- |
+| Edges in a non-empty tree with `N` nodes | `N - 1` |
+| Maximum nodes at level `L` | `2^L` |
+| Maximum nodes in a tree of height `H` | `2^(H + 1) - 1` |
+| Minimum nodes in a tree of height `H` | `H + 1` |
+| Leaves in a perfect tree of height `H` | `2^H` |
+
+The maximum-node formula is achieved by a perfect tree. The minimum-node formula is achieved by a chain in which every internal node has exactly one child.
+
+## 7. Types of Binary Trees
+
+### 7.1 Full Binary Tree
+
+A full, strict, or proper binary tree is one in which every node has either zero children or exactly two children. No node has exactly one child.
+
+### 7.2 Complete Binary Tree
+
+A complete binary tree has:
+
+- every level completely filled except possibly the last
+- nodes on the last level placed as far left as possible
+
+Complete trees are efficient to store in arrays and are commonly used for binary heaps.
+
+### 7.3 Perfect Binary Tree
+
+A perfect binary tree has:
+
+- exactly two children for every internal node
+- all leaves at the same depth
+- every level completely filled
+
+Every perfect tree is both full and complete. The reverse is not necessarily true.
+
+### 7.4 Balanced Binary Tree
+
+A tree is balanced when its height remains small relative to its number of nodes. A common height-balanced definition requires the heights of the left and right subtrees of every node to differ by at most `1`.
+
+A balanced tree generally has height `O(log N)`, but balanced does not mean complete or perfect.
+
+### 7.5 Degenerate Binary Tree
+
+A degenerate tree has only one child at every internal node. It resembles a linked list. With `N` nodes, its height is `N - 1`.
+
+### 7.6 Skewed Binary Tree
+
+A skewed tree is a degenerate tree in which all children extend in the same direction:
+
+- left-skewed
+- right-skewed
+
+Every skewed tree is degenerate, but a degenerate tree may alternate between left and right children.
+
+![Types of Binary Tree](Types%20of%20Binary%20Tree.png)
+
+## 8. Representing a Binary Tree
+
+### 8.1 Linked Representation
+
+Each node stores its value and two child references. A missing child is represented by `NULL`, and the tree is accessed through its root reference.
+
+**Advantages**
+
+- works for sparse and irregular trees
+- creates nodes as needed
+- makes child connections easy to change
+- does not reserve unused positions
+
+**Limitations**
+
+- each node needs storage for two references
+- nodes may not be contiguous in memory
+- arbitrary nodes do not have direct index-based access
+
+### 8.2 Array Representation
+
+Using zero-based indexing, if a node is stored at index `i`:
+
+```text
+left child  = 2i + 1
+right child = 2i + 2
+parent      = floor((i - 1) / 2)   (for i > 0)
+```
+
+For example, the array `[1, 2, 3, 4, 5, 6, 7]` represents:
+
+```text
+        1
+       / \
+      2   3
+     / \ / \
+    4  5 6  7
+```
+
+Array representation is efficient for complete or nearly complete trees, but sparse or skewed trees can waste a large number of positions.
+
+![Binary Tree Linked List and Array Representation](Binary%20Tree%20Linked%20List%20and%20Array%20Representation.png)
+
+## 9. Tree Traversals
+
+Traversal means visiting every node exactly once in a defined order.
+
+### 9.1 Depth-First Search
+
+DFS explores one subtree deeply before moving to the other subtree.
+
+| Traversal | Order | Result for the example |
+| --- | --- | --- |
+| Preorder | Root, Left, Right | `1, 2, 4, 5, 3, 6` |
+| Inorder | Left, Root, Right | `4, 2, 5, 1, 3, 6` |
+| Postorder | Left, Right, Root | `4, 5, 2, 6, 3, 1` |
+
+**Preorder** processes a node before its subtrees. It is useful for copying and serializing a tree.
+
+**Inorder** processes the left subtree, then the node, then the right subtree. It produces sorted values only when applied to a Binary Search Tree.
+
+**Postorder** processes both subtrees before the node. It is useful for deleting a tree and evaluating expression trees.
+
+Recursive preorder pseudocode:
+
+```text
+preorder(node):
+    if node is NULL:
+        return
+    visit(node)
+    preorder(node.left)
+    preorder(node.right)
+```
+
+### 9.2 Breadth-First Search
+
+BFS visits nodes level by level, normally from left to right. This is called level-order traversal.
+
+For the example, the result is:
+
+```text
+1, 2, 3, 4, 5, 6
+```
+
+A queue preserves the order in which nodes should be processed:
+
+```text
+levelOrder(root):
+    if root is NULL:
+        return
+
+    queue.push(root)
+    while queue is not empty:
+        node = queue.pop()
+        visit(node)
+
+        if node.left is not NULL:
+            queue.push(node.left)
+        if node.right is not NULL:
+            queue.push(node.right)
+```
+
+Level-order traversal is useful for processing levels, finding minimum depth, measuring width, and solving other level-based problems.
+
+![Binary Tree Traversals](Binary%20Tree%20Traversals.png)
+
+## 10. Traversal Complexity
+
+Let `N` be the number of nodes, `H` the tree height, and `W` the maximum width.
+
+| Traversal | Time | Auxiliary space |
+| --- | --- | --- |
+| Recursive DFS | `O(N)` | `O(H)` call stack |
+| Iterative DFS | `O(N)` | `O(N)` worst case for the explicit stack |
+| Level-order BFS | `O(N)` | `O(W)` queue |
+
+Every complete traversal visits all `N` nodes. For a balanced tree, recursive DFS uses `O(log N)` stack space. For a skewed tree, it uses `O(N)`. In the worst case, `W` is also `O(N)`.
+
+## 11. Common Operations on a General Binary Tree
+
+A general binary tree does not impose an ordering rule on values. Therefore, a search cannot decide which subtree to skip.
+
+| Operation | Time | Reason |
+| --- | --- | --- |
+| Traverse the tree | `O(N)` | Every node may be visited |
+| Search for a value | `O(N)` | The value may be anywhere |
+| Count nodes | `O(N)` | Every node must be counted |
+| Calculate height | `O(N)` | Both subtrees may need to be examined |
+| Find minimum or maximum value | `O(N)` | No value ordering is guaranteed |
+| Access a known child | `O(1)` | The child reference is direct |
+
+Insertion and deletion do not have one universal complexity for a general binary tree. Their cost depends on the structural rule and the location chosen by the problem.
+
+## 12. Binary Tree vs. Binary Search Tree
+
+| Binary tree | Binary Search Tree (BST) |
+| --- | --- |
+| At most two children per node | At most two children per node |
+| No general ordering rule for values | Values follow an ordering rule |
+| Search is generally `O(N)` | Search is `O(H)` |
+| Inorder traversal is not necessarily sorted | Inorder traversal is sorted |
+| Used for general hierarchies | Used for ordered search and updates |
+
+A BST is a specialized binary tree. In a balanced BST, search, insertion, and deletion can be `O(log N)`. In a skewed BST, these operations can degrade to `O(N)`.
+
+## 13. Applications
+
+Binary trees appear in:
+
+- Binary Search Trees for ordered data
+- Binary Heaps for priority queues
+- expression trees for arithmetic expressions
+- Abstract Syntax Trees in compilers and interpreters
+- Huffman trees for compression
+- segment trees for range queries
+- decision trees in machine learning
+- game trees for decision-making
+- hierarchical state representation
+
+## 14. Advantages and Limitations
+
+**Advantages**
+
+- naturally represent hierarchical relationships
+- support several useful traversal orders
+- have a recursive structure that simplifies many algorithms
+- can grow dynamically with linked representation
+- form the basis of many specialized data structures
+
+**Limitations**
+
+- a general binary tree does not guarantee fast searching
+- linked nodes require extra child-reference storage
+- poor structure can produce linear height
+- deep recursive traversals can overflow the call stack
+- sparse trees can waste space in array representation
+- pointer-based structures require careful reference management
+
+## 15. Common Mistakes
+
+- Assuming every binary tree is a BST.
+- Confusing full, complete, perfect, balanced, degenerate, and skewed trees.
+- Treating left and right children as interchangeable.
+- Mixing node-based and edge-based height definitions.
+- Forgetting that a single-node tree has edge-based height `0`.
+- Assuming a balanced tree must be complete or perfect.
+- Forgetting the `NULL` base case in recursive algorithms.
+- Claiming that every inorder traversal is sorted.
+- Reporting DFS space as only `O(N)` without considering height.
+- Using an array for a highly sparse tree without considering wasted positions.
+- Forgetting that a non-empty tree with `N` nodes has `N - 1` edges.
