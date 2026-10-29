@@ -20,8 +20,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/KIIT/OneDrive/Desktop/DSA_and_Leetcode_Questions/step-05-strings/Basic and Easy Problems",
-      "program": "c:/Users/KIIT/OneDrive/Desktop/DSA_and_Leetcode_Questions/step-05-strings/Basic and Easy Problems/build/Debug/outDebug",
+      "cwd": "c:/Users/KIIT/OneDrive/Desktop/DSA_and_Leetcode_Questions/step-09-stacks-queues/04 FAQs",
+      "program": "c:/Users/KIIT/OneDrive/Desktop/DSA_and_Leetcode_Questions/step-09-stacks-queues/04 FAQs/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
